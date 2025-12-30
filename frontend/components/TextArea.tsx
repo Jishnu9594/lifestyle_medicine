@@ -1,6 +1,6 @@
 "use client";
 
-import { useController, FieldValues, Control } from "react-hook-form";
+import { useController, Control } from "react-hook-form";
 import clsx from "clsx";
 
 interface TextAreaProps {
