@@ -4,16 +4,20 @@ import { Footer } from "@/components/Footer";
 import { Container } from "@/components/Container";
 import { Section } from "@/components/Section";
 
+type PageProps = {
+  params: {
+    slug: string;
+  };
+};
+
 export const metadata: Metadata = {
   title: "Blog Post",
   description: "Read our latest article on lifestyle medicine.",
 };
 
-export default function BlogDetailPage({
-  params,
-}: {
-  params: { slug: string };
-}) {
+export default function BlogDetailPage({ params }: PageProps) {
+  const { slug } = params; // ✅ FIX: slug is now used
+
   return (
     <>
       <Navigation />
@@ -22,7 +26,7 @@ export default function BlogDetailPage({
           <Container size="md">
             <article>
               <header className="mb-8">
-                <h1 className="heading-1 mb-4">Blog Post Title</h1>
+                <h1 className="heading-1 mb-4">Blog Post: {slug}</h1>
                 <p className="text-muted">
                   Published on {new Date().toLocaleDateString()} • 5 min read
                 </p>
@@ -30,8 +34,12 @@ export default function BlogDetailPage({
 
               <div className="prose prose-lg max-w-none mb-8">
                 <p>
-                  This is where the blog content will be displayed. Content will
-                  be fetched from the API and rendered here.
+                  This content is rendered for blog slug:{" "}
+                  <strong>{slug}</strong>.
+                </p>
+                <p>
+                  In the next step, this data will be fetched from the FastAPI
+                  backend and rendered dynamically.
                 </p>
               </div>
 
