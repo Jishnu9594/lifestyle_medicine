@@ -131,7 +131,10 @@ function ContactFormContent() {
 
 export function ContactFormSection() {
   return (
-    <Section spacing="lg" className="bg-gradient-to-br from-primary-50 to-primary-100/50">
+    <Section
+      spacing="lg"
+      className="bg-gradient-to-br from-primary-50 to-primary-100/50"
+    >
       <Suspense fallback={<div>Loading form...</div>}>
         <ContactFormContent />
       </Suspense>
