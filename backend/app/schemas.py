@@ -8,6 +8,9 @@ class BlogBase(BaseModel):
     slug: str = Field(..., min_length=1, max_length=255)
     excerpt: str = Field(..., min_length=10, max_length=500)
     content: str = Field(..., min_length=50)
+    image_url: Optional[str] = Field(None, max_length=500)
+    author: Optional[str] = Field(None, max_length=255)
+    category: Optional[str] = Field(None, max_length=100)
     published: bool = False
 
 
@@ -19,6 +22,9 @@ class BlogUpdate(BaseModel):
     title: Optional[str] = Field(None, min_length=1, max_length=255)
     excerpt: Optional[str] = Field(None, min_length=10, max_length=500)
     content: Optional[str] = Field(None, min_length=50)
+    image_url: Optional[str] = Field(None, max_length=500)
+    author: Optional[str] = Field(None, max_length=255)
+    category: Optional[str] = Field(None, max_length=100)
     published: Optional[bool] = None
 
 
