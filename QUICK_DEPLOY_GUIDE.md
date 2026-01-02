@@ -3,10 +3,12 @@
 ## ⚡ Super Quick (5 minutes)
 
 ### Step 1: Go to Render
+
 1. Visit https://render.com
 2. Sign up with GitHub
 
 ### Step 2: Create Web Service
+
 1. Click "New +" → "Web Service"
 2. Select your `lifestyle_medicine` repository
 3. Configure:
@@ -15,17 +17,21 @@
    - **Start Command**: `cd backend && uvicorn app.main:app --host 0.0.0.0 --port 8000`
 
 ### Step 3: Deploy
+
 - Click "Create Web Service"
 - Wait 2-3 minutes
 - Get your URL: `https://lifestyle-medicine-api.onrender.com`
 
 ### Step 4: Update Frontend
+
 Update `frontend/.env.local`:
+
 ```
 NEXT_PUBLIC_API_URL=https://lifestyle-medicine-api.onrender.com
 ```
 
 ### Step 5: Test
+
 ```bash
 curl https://lifestyle-medicine-api.onrender.com/health
 # Should return: {"status":"healthy"}
@@ -36,6 +42,7 @@ curl https://lifestyle-medicine-api.onrender.com/health
 ## 📚 Full Details
 
 See `BACKEND_DEPLOYMENT_GUIDE.md` for complete information on:
+
 - All hosting options (Render, Railway, Heroku, DigitalOcean, etc.)
 - Step-by-step deployment instructions
 - Database setup
@@ -57,6 +64,7 @@ See `BACKEND_DEPLOYMENT_GUIDE.md` for complete information on:
 ## 💡 Recommended Platform: **Render**
 
 Why Render?
+
 - ✅ Free tier available
 - ✅ Auto-deploy from GitHub
 - ✅ Custom domain support

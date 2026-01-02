@@ -3,8 +3,9 @@
 ## Recommended Hosting Platforms
 
 ### 1. **Render** (Recommended - Free Tier Available)
+
 - **URL**: https://render.com
-- **Pros**: 
+- **Pros**:
   - Free tier with auto-deploy from GitHub
   - Automatic HTTPS
   - PostgreSQL database included
@@ -18,6 +19,7 @@
   6. Deploy!
 
 ### 2. **Railway** (Free Tier Available)
+
 - **URL**: https://railway.app
 - **Pros**:
   - Simple interface
@@ -33,6 +35,7 @@
   6. Deploy!
 
 ### 3. **Heroku** (Paid, was free but now requires credit card)
+
 - **URL**: https://heroku.com
 - **Pros**:
   - Industry standard
@@ -45,6 +48,7 @@
   4. Deploy!
 
 ### 4. **PythonAnywhere** (Paid, Python-Specific)
+
 - **URL**: https://pythonanywhere.com
 - **Pros**:
   - Python-specific hosting
@@ -52,6 +56,7 @@
   - Web-based console
 
 ### 5. **DigitalOcean App Platform** (Paid, $12/month starting)
+
 - **URL**: https://www.digitalocean.com/products/app-platform/
 - **Pros**:
   - Affordable
@@ -62,6 +67,7 @@
 ## Step-by-Step Guide for Render (Easiest)
 
 ### 1. Prepare Your Repository
+
 ```bash
 # Make sure all code is committed
 git add .
@@ -70,17 +76,20 @@ git push origin main
 ```
 
 ### 2. Create Render Account
+
 - Go to https://render.com
 - Sign up with GitHub
 - Connect your GitHub account
 
 ### 3. Create Web Service
+
 - Click "New +"
 - Select "Web Service"
 - Connect your lifestyle_medicine repository
 - Select the main branch
 
 ### 4. Configure Service
+
 - **Name**: lifestyle-medicine-api
 - **Runtime**: Python
 - **Build Command**: `pip install -r backend/requirements.txt`
@@ -89,16 +98,20 @@ git push origin main
 - **Free tier** or **Paid** (your choice)
 
 ### 5. Add Environment Variables (Optional)
+
 - DATABASE_URL (if using PostgreSQL)
 - Any other environment-specific variables
 
 ### 6. Deploy
+
 - Click "Create Web Service"
 - Wait for deployment (2-3 minutes)
 - You'll get a URL like: `https://lifestyle-medicine-api.onrender.com`
 
 ### 7. Update Frontend
+
 In `frontend/next.config.js`:
+
 ```javascript
 env: {
   NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL || "https://lifestyle-medicine-api.onrender.com",
@@ -108,24 +121,28 @@ env: {
 ## Database Migration (Important)
 
 ### For Local Development (SQLite - Current)
+
 - Keep using SQLite in `backend/app/database.py`
 - File: `app.db` (already created)
 
 ### For Production (PostgreSQL - Recommended)
+
 You may want to switch to PostgreSQL for production:
 
 1. Install PostgreSQL driver:
+
    ```bash
    pip install psycopg2-binary
    ```
 
 2. Update `backend/app/database.py`:
+
    ```python
    import os
    from sqlalchemy import create_engine
-   
+
    DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./app.db")
-   
+
    engine = create_engine(
        DATABASE_URL,
        connect_args={"check_same_thread": False} if "sqlite" in DATABASE_URL else {}
@@ -160,18 +177,21 @@ app.add_middleware(
 ## Testing After Deployment
 
 ### 1. Test Backend Health
+
 ```bash
 curl https://your-backend-url/health
 # Should return: {"status": "healthy"}
 ```
 
 ### 2. Test Blog Endpoint
+
 ```bash
 curl https://your-backend-url/blogs
 # Should return list of blogs
 ```
 
 ### 3. Test Frontend Connection
+
 - Update API URL in frontend
 - Run: `npm run dev`
 - Check if blogs load from backend
@@ -179,15 +199,18 @@ curl https://your-backend-url/blogs
 ## Troubleshooting
 
 ### 502 Bad Gateway
+
 - Check deployment logs
 - Ensure start command is correct
 - Verify Python version compatibility
 
 ### CORS Errors
+
 - Add your frontend domain to allowed_origins
 - Redeploy backend
 
 ### Database Errors
+
 - Check DATABASE_URL environment variable
 - Ensure database migrations ran
 - Check logs for SQL errors
@@ -195,6 +218,7 @@ curl https://your-backend-url/blogs
 ## Recommendation
 
 **I recommend Render because:**
+
 1. ✅ Free tier with good limits
 2. ✅ Auto-deploy from GitHub
 3. ✅ Custom domain support

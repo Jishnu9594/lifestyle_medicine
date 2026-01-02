@@ -10,7 +10,8 @@ import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Blog | Lifestyle Medicine Academy",
-  description: "Latest articles on lifestyle medicine, health, wellness, nutrition, fitness, and sleep optimization.",
+  description:
+    "Latest articles on lifestyle medicine, health, wellness, nutrition, fitness, and sleep optimization.",
 };
 
 export default function BlogPage() {
@@ -21,8 +22,10 @@ export default function BlogPage() {
       slug: "nutrition-disease-prevention",
       excerpt:
         "Discover how proper nutrition can be your most powerful tool against chronic diseases. Learn evidence-based strategies.",
-      content: "Explore comprehensive insights on how nutritional changes can prevent and reverse lifestyle-related disorders...",
-      image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&h=400&fit=crop&q=80",
+      content:
+        "Explore comprehensive insights on how nutritional changes can prevent and reverse lifestyle-related disorders...",
+      image:
+        "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&h=400&fit=crop&q=80",
       author: "Dr. Sarah Johnson",
       category: "Nutrition",
       date: "2024-01-15",
@@ -34,8 +37,10 @@ export default function BlogPage() {
       slug: "sleep-foundation-health",
       excerpt:
         "Understanding sleep architecture and how to optimize your sleep quality for better health outcomes.",
-      content: "Master the science of sleep and implement practical strategies to improve your sleep quality and overall health...",
-      image: "https://images.unsplash.com/photo-1541480527022-8158e7deaf63?w=600&h=400&fit=crop&q=80",
+      content:
+        "Master the science of sleep and implement practical strategies to improve your sleep quality and overall health...",
+      image:
+        "https://images.unsplash.com/photo-1541480527022-8158e7deaf63?w=600&h=400&fit=crop&q=80",
       author: "Dr. Michael Chen",
       category: "Sleep",
       date: "2024-01-10",
@@ -47,8 +52,10 @@ export default function BlogPage() {
       slug: "fitness-movement-life",
       excerpt:
         "Learn how to incorporate functional movement into your daily life for long-term health benefits.",
-      content: "Discover practical approaches to fitness that go beyond traditional workouts and fit into your lifestyle...",
-      image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=400&fit=crop&q=80",
+      content:
+        "Discover practical approaches to fitness that go beyond traditional workouts and fit into your lifestyle...",
+      image:
+        "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=400&fit=crop&q=80",
       author: "Dr. Emily Rodriguez",
       category: "Fitness",
       date: "2024-01-05",
@@ -60,8 +67,10 @@ export default function BlogPage() {
       slug: "stress-management-basics",
       excerpt:
         "Evidence-based techniques to manage stress and build resilience in our high-pressure modern world.",
-      content: "Explore scientifically-backed strategies for managing stress and building long-term resilience...",
-      image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&h=400&fit=crop&q=80",
+      content:
+        "Explore scientifically-backed strategies for managing stress and building long-term resilience...",
+      image:
+        "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&h=400&fit=crop&q=80",
       author: "Dr. James Wilson",
       category: "Stress Management",
       date: "2023-12-28",
@@ -69,14 +78,17 @@ export default function BlogPage() {
     },
   ];
 
-  const categories = [...new Set(blogPosts.map(post => post.category))];
+  const categories = [...new Set(blogPosts.map((post) => post.category))];
 
   return (
     <>
       <Navigation />
       <main className="min-h-screen overflow-hidden">
         {/* Hero Section */}
-        <Section spacing="lg" className="bg-gradient-to-br from-primary-50 via-white to-primary-100/50">
+        <Section
+          spacing="lg"
+          className="bg-gradient-to-br from-primary-50 via-white to-primary-100/50"
+        >
           <Container>
             <FadeIn delay={0.1}>
               <div className="text-center py-16 sm:py-24">
@@ -89,7 +101,8 @@ export default function BlogPage() {
                   Insights
                 </h1>
                 <p className="text-body mx-auto max-w-2xl text-lg">
-                  Evidence-based articles on lifestyle medicine, nutrition, fitness, sleep, and stress management.
+                  Evidence-based articles on lifestyle medicine, nutrition,
+                  fitness, sleep, and stress management.
                 </p>
               </div>
             </FadeIn>
@@ -104,7 +117,7 @@ export default function BlogPage() {
                 <button className="px-6 py-2 rounded-full bg-primary-500 text-white font-semibold hover:bg-primary-600 transition-colors">
                   All Articles
                 </button>
-                {categories.map(category => (
+                {categories.map((category) => (
                   <button
                     key={category}
                     className="px-6 py-2 rounded-full border-2 border-primary-200 text-primary-600 font-semibold hover:bg-primary-50 hover:border-primary-300 transition-all"
@@ -125,7 +138,10 @@ export default function BlogPage() {
                 blogPosts.map((post, index) => (
                   <FadeIn key={post.id} delay={0.3 + index * 0.1}>
                     <Link href={`/blog/${post.slug}`} className="group">
-                      <Card hover className="overflow-hidden flex flex-col h-full">
+                      <Card
+                        hover
+                        className="overflow-hidden flex flex-col h-full"
+                      >
                         {/* Image */}
                         <div className="relative h-48 overflow-hidden bg-gray-200">
                           <Image
@@ -143,7 +159,9 @@ export default function BlogPage() {
                         {/* Content */}
                         <div className="p-6 flex flex-col flex-grow">
                           <div className="flex items-center justify-between text-sm text-muted mb-3">
-                            <span>{new Date(post.date).toLocaleDateString()}</span>
+                            <span>
+                              {new Date(post.date).toLocaleDateString()}
+                            </span>
                             <span>{post.readTime}</span>
                           </div>
 
@@ -180,13 +198,17 @@ export default function BlogPage() {
         </Section>
 
         {/* Newsletter Section */}
-        <Section spacing="lg" className="bg-gradient-to-br from-primary-100 to-primary-50">
+        <Section
+          spacing="lg"
+          className="bg-gradient-to-br from-primary-100 to-primary-50"
+        >
           <Container size="md">
             <FadeIn delay={0.5}>
               <Card hover className="text-center">
                 <h2 className="heading-2 mb-4">Stay Updated</h2>
                 <p className="text-muted mb-6">
-                  Subscribe to our newsletter for weekly insights on lifestyle medicine and health optimization.
+                  Subscribe to our newsletter for weekly insights on lifestyle
+                  medicine and health optimization.
                 </p>
                 <div className="flex gap-2">
                   <input
