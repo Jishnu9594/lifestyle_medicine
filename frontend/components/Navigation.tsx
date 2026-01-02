@@ -20,9 +20,9 @@ export function Navigation() {
             <Image
               src="/lifestlelogo.png"
               alt="LifeStyle Medicine Logo"
-              width={40}
-              height={40}
-              className="h-10 w-10 sm:h-12 sm:w-12 object-contain"
+              width={60}
+              height={60}
+              className="h-14 w-14 sm:h-16 sm:w-16 object-contain"
             />
             <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent hover:from-primary-700 hover:to-primary-600 transition-all">
               LifeStyle Medicine

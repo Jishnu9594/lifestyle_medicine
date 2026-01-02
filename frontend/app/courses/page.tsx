@@ -101,6 +101,35 @@ export default function CoursesPage() {
       instructor: "Dr. Amanda Lee",
       lessons: 64,
     },
+    {
+      id: 7,
+      title: "Foundation Course in Lifestyle Medicine (FCLM)",
+      description:
+        "A comprehensive 3-month online program designed for Indian doctors to upskill in Lifestyle Medicine. Includes video modules, live sessions, and clinic setup guidance.",
+      level: "Professional",
+      duration: "3 months",
+      students: "500+",
+      rating: 4.95,
+      image:
+        "https://images.unsplash.com/photo-1579154204601-01d82b06baa8?w=500&h=300&fit=crop",
+      price: "$599",
+      instructor: "Mediwell Health Academy India",
+      lessons: 50,
+      isNew: true,
+      features: [
+        "20+ hours of high-quality video modules",
+        "Live online sessions for Q&A and group interaction",
+        "Downloadable course materials and workbooks",
+        "Case-based reflections from real clinical practice",
+        "Clinic setup guidance from expert faculty",
+        "Certificate of Completion from Mediwell Health Academy India",
+        "Optional Dual Certification from European Lifestyle Medicine Society",
+      ],
+      whoShouldJoin:
+        "MBBS and above (MD/MS, DNB, PG Diploma holders). Ideal for physicians, family medicine practitioners, diabetologists, and public health professionals.",
+      aboutCourse:
+        "FCLM is designed specifically for Indian doctors to upskill in the science and application of Lifestyle Medicine. With a blend of video modules, live interactive sessions, practical case reflections, and clinic setup guidance, this course uniquely addresses lifestyle-related disorders through preventive, evidence-based strategies.",
+    },
   ];
 
   return (

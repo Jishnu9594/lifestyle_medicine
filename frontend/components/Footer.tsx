@@ -49,9 +49,9 @@ export function Footer() {
               <Image
                 src="/lifestlelogo.png"
                 alt="LifeStyle Medicine Logo"
-                width={40}
-                height={40}
-                className="h-10 w-10 object-contain"
+                width={50}
+                height={50}
+                className="h-12 w-12 object-contain"
               />
               <h3 className="text-2xl font-bold bg-gradient-to-r from-primary-300 to-primary-200 bg-clip-text text-transparent">
                 LifeStyle Medicine
