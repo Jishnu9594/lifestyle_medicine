@@ -67,42 +67,42 @@ export default function Home() {
 
   const whyChooseUs = [
     {
-      icon: "👨‍🎓",
+      iconType: "instructor",
       title: "Expert Instructors",
       description:
         "Learn from certified lifestyle medicine professionals with 15+ years experience.",
       color: "from-blue-400 to-blue-600",
     },
     {
-      icon: "📚",
+      iconType: "book",
       title: "Comprehensive Curriculum",
       description:
         "300+ lessons covering nutrition, fitness, sleep, stress management, and more.",
       color: "from-green-400 to-green-600",
     },
     {
-      icon: "🌍",
+      iconType: "globe",
       title: "Flexible Learning",
       description:
         "Learn at your own pace with lifetime access to all course materials.",
       color: "from-purple-400 to-purple-600",
     },
     {
-      icon: "🏆",
+      iconType: "trophy",
       title: "Certified Courses",
       description:
         "Earn recognized certificates upon course completion to boost your credentials.",
       color: "from-orange-400 to-orange-600",
     },
     {
-      icon: "💬",
+      iconType: "chat",
       title: "Community Support",
       description:
         "Join thousands of students in our active learning community with mentorship.",
       color: "from-pink-400 to-pink-600",
     },
     {
-      icon: "📊",
+      iconType: "chart",
       title: "Real Results",
       description:
         "95% of students report significant health improvements within 90 days.",
@@ -186,19 +186,19 @@ export default function Home() {
                     <ModernStat
                       number="9,720+"
                       label="Active Students"
-                      icon="🎓"
+                      iconType="students"
                       delay={0}
                     />
                     <ModernStat
                       number="6"
                       label="Expert Courses"
-                      icon="�"
+                      iconType="courses"
                       delay={100}
                     />
                     <ModernStat
                       number="4.92★"
                       label="Average Rating"
-                      icon="✨"
+                      iconType="rating"
                       delay={200}
                     />
                   </div>
@@ -317,7 +317,7 @@ export default function Home() {
               {whyChooseUs.map((item, index) => (
                 <ModernFeatureCard
                   key={item.title}
-                  icon={item.icon}
+                  iconType={item.iconType}
                   title={item.title}
                   description={item.description}
                   gradient={item.color}

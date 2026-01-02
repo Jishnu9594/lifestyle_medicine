@@ -8,6 +8,7 @@ import { newsletterSchema, NewsletterData } from "@/lib/validation";
 import { leadAPI } from "@/lib/api";
 import { Button } from "./Button";
 import { Input } from "./Input";
+import Image from "next/image";
 
 export function Footer() {
   const [isLoading, setIsLoading] = useState(false);
@@ -44,8 +45,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <div className="animate-fadeInUp">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="text-3xl">🏥</span>
+            <div className="flex items-center gap-3 mb-4">
+              <Image
+                src="/lifestlelogo.png"
+                alt="LifeStyle Medicine Logo"
+                width={40}
+                height={40}
+                className="h-10 w-10 object-contain"
+              />
               <h3 className="text-2xl font-bold bg-gradient-to-r from-primary-300 to-primary-200 bg-clip-text text-transparent">
                 LifeStyle Medicine
               </h3>
