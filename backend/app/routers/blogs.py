@@ -1,6 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from app.database import get_db
+from app.models import Blog
 from app.schemas import BlogCreate, BlogResponse, BlogUpdate
 from app.crud import (
     get_blog,
@@ -34,7 +35,7 @@ def get_blog_detail(slug: str, db: Session = Depends(get_db)):
 def create_new_blog(blog: BlogCreate, db: Session = Depends(get_db)):
     """Create a new blog post (publish directly)"""
     # Check if slug already exists
-    existing = db.query(get_blog(db, blog.id)).filter_by(slug=blog.slug).first()
+    existing = db.query(Blog).filter_by(slug=blog.slug).first()
     if existing:
         raise HTTPException(status_code=400, detail="Slug already exists")
     
