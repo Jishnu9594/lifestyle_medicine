@@ -3,10 +3,12 @@
 ## 🌐 Live URLs (Current)
 
 ### Production Backend
+
 - **Base URL**: https://lifestyle-medicine.onrender.com
 - **Status**: ✅ Live & Running
 
 ### Local Frontend (Development)
+
 - **URL**: http://localhost:3000
 - **Start Command**: `cd frontend && npm run dev`
 
@@ -15,17 +17,19 @@
 ## 📍 Public Pages (Accessible to Everyone)
 
 ### Website Pages
-| Page | URL | Features |
-|------|-----|----------|
-| Homepage | http://localhost:3000 | Hero, stats, features, testimonials |
-| Blog | http://localhost:3000/blog | List of published blogs, fetches from backend |
-| About | http://localhost:3000/about | About your academy |
-| Courses | http://localhost:3000/courses | Available courses |
-| Contact | http://localhost:3000/contact | Contact form with lead submission |
-| Privacy | http://localhost:3000/privacy | Privacy policy |
-| Terms | http://localhost:3000/terms | Terms of service |
+
+| Page     | URL                           | Features                                      |
+| -------- | ----------------------------- | --------------------------------------------- |
+| Homepage | http://localhost:3000         | Hero, stats, features, testimonials           |
+| Blog     | http://localhost:3000/blog    | List of published blogs, fetches from backend |
+| About    | http://localhost:3000/about   | About your academy                            |
+| Courses  | http://localhost:3000/courses | Available courses                             |
+| Contact  | http://localhost:3000/contact | Contact form with lead submission             |
+| Privacy  | http://localhost:3000/privacy | Privacy policy                                |
+| Terms    | http://localhost:3000/terms   | Terms of service                              |
 
 ### Blog Detail Pages
+
 - http://localhost:3000/blog/{slug}
 - Example: http://localhost:3000/blog/intro-lifestyle-medicine
 
@@ -34,11 +38,12 @@
 ## 🔐 Admin Pages (Currently Public - Add Password Later!)
 
 ### Admin Dashboard
-| Page | URL | What You Can Do |
-|------|-----|-----------------|
-| **Admin Hub** | http://localhost:3000/admin | Overview of all admin features |
-| **Blog Manager** | http://localhost:3000/admin/blogs | Create, edit, delete blogs |
-| **Leads Dashboard** | http://localhost:3000/admin/leads | View, filter, export leads |
+
+| Page                | URL                               | What You Can Do                |
+| ------------------- | --------------------------------- | ------------------------------ |
+| **Admin Hub**       | http://localhost:3000/admin       | Overview of all admin features |
+| **Blog Manager**    | http://localhost:3000/admin/blogs | Create, edit, delete blogs     |
+| **Leads Dashboard** | http://localhost:3000/admin/leads | View, filter, export leads     |
 
 ---
 
@@ -47,6 +52,7 @@
 ### Blog Manager (/admin/blogs)
 
 **✅ What You Can Do:**
+
 - Create new blog posts with full form validation
 - Edit existing blogs
 - Delete blogs
@@ -55,6 +61,7 @@
 - Add author, category, image URL
 
 **📋 Form Fields:**
+
 ```
 Title (required) ........... "The Power of Nutrition"
 Slug (required) ............ "power-of-nutrition"
@@ -67,6 +74,7 @@ Published (checkbox) ....... ☑️ = Live, ☐ = Draft
 ```
 
 **🎯 Example:**
+
 1. Go to http://localhost:3000/admin/blogs
 2. Fill in the form:
    - Title: "Benefits of Exercise"
@@ -86,6 +94,7 @@ Published (checkbox) ....... ☑️ = Live, ☐ = Draft
 ### Leads Dashboard (/admin/leads)
 
 **✅ What You Can Do:**
+
 - View all submitted leads with details
 - Filter leads by source (contact, course, etc.)
 - See statistics (total, today, by source)
@@ -95,6 +104,7 @@ Published (checkbox) ....... ☑️ = Live, ☐ = Draft
 - Export all leads as CSV
 
 **📊 Statistics Shown:**
+
 ```
 Total Leads: 25
 Today: 3
@@ -103,6 +113,7 @@ Course Enrollments: 5
 ```
 
 **🎯 Example:**
+
 1. Go to http://localhost:3000/admin/leads
 2. See all your leads in a list
 3. Click a lead to expand and see full message
@@ -111,6 +122,7 @@ Course Enrollments: 5
 6. Click "📥 Export CSV" to download as spreadsheet
 
 **📊 Filter Options:**
+
 - All Leads
 - Contact (from contact form)
 - Course (course enrollments)
@@ -124,6 +136,7 @@ Course Enrollments: 5
 ### When User Submits Contact Form
 
 **Email 1: Admin Notification** (To You)
+
 ```
 Subject: 🔔 New Lead: John Doe
 From: your-email@gmail.com
@@ -137,6 +150,7 @@ Contains:
 ```
 
 **Email 2: Welcome Email** (To User)
+
 ```
 Subject: Thank you for contacting Lifestyle Medicine Academy!
 From: your-email@gmail.com
@@ -154,6 +168,7 @@ Contains:
 ## 🔄 Data Flow Visualization
 
 ### Creating a Blog
+
 ```
 You fill form → Click Create → Backend stores → Blog appears on /blog page
 (/admin/blogs)      ↓              ↓                        ↓
@@ -161,6 +176,7 @@ You fill form → Click Create → Backend stores → Blog appears on /blog page
 ```
 
 ### Submitting a Lead
+
 ```
 User fills → Clicks Send → Backend stores → You get email ← Email service
 form           ↓             ↓                  ↓
@@ -175,6 +191,7 @@ at /contact   Validation   SQLite DB    Sent to admin email
 ## 🛠️ Setup Requirements
 
 ### What You Already Have:
+
 - ✅ Backend API running (https://lifestyle-medicine.onrender.com)
 - ✅ Frontend code (all pages ready)
 - ✅ Admin pages (blog manager, leads dashboard)
@@ -184,6 +201,7 @@ at /contact   Validation   SQLite DB    Sent to admin email
 ### What You Need to Do:
 
 #### Step 1: Configure Email (5 minutes)
+
 1. Create `.env` file in `backend/` folder
 2. Add your Gmail credentials:
    ```
@@ -197,6 +215,7 @@ at /contact   Validation   SQLite DB    Sent to admin email
 4. Restart backend to load .env
 
 #### Step 2: Test Everything (5 minutes)
+
 1. Create a test blog at /admin/blogs
 2. Verify it shows on /blog page
 3. Fill contact form at /contact
@@ -204,6 +223,7 @@ at /contact   Validation   SQLite DB    Sent to admin email
 5. View lead in /admin/leads
 
 #### Step 3: Deploy (Optional)
+
 1. Push to GitHub: `git push origin main`
 2. Deploy frontend to Vercel
 3. Backend already auto-deploys
@@ -213,6 +233,7 @@ at /contact   Validation   SQLite DB    Sent to admin email
 ## 🎯 Common Tasks
 
 ### Create a New Blog
+
 ```
 1. Go to http://localhost:3000/admin/blogs
 2. Fill the form
@@ -221,6 +242,7 @@ at /contact   Validation   SQLite DB    Sent to admin email
 ```
 
 ### Respond to a Lead
+
 ```
 1. Go to http://localhost:3000/admin/leads
 2. Click the lead you want to reply to
@@ -230,6 +252,7 @@ at /contact   Validation   SQLite DB    Sent to admin email
 ```
 
 ### Export All Leads
+
 ```
 1. Go to http://localhost:3000/admin/leads
 2. (Optional) Filter by source
@@ -238,6 +261,7 @@ at /contact   Validation   SQLite DB    Sent to admin email
 ```
 
 ### Edit a Blog
+
 ```
 1. Go to http://localhost:3000/admin/blogs
 2. Find the blog in the list
@@ -247,6 +271,7 @@ at /contact   Validation   SQLite DB    Sent to admin email
 ```
 
 ### Delete a Blog
+
 ```
 1. Go to http://localhost:3000/admin/blogs
 2. Find the blog
@@ -258,23 +283,24 @@ at /contact   Validation   SQLite DB    Sent to admin email
 
 ## 🔗 Quick Links
 
-| Purpose | Link |
-|---------|------|
-| **Homepage** | http://localhost:3000 |
-| **Blog Page** | http://localhost:3000/blog |
-| **Contact Form** | http://localhost:3000/contact |
-| **Admin Dashboard** | http://localhost:3000/admin |
-| **Blog Manager** | http://localhost:3000/admin/blogs |
-| **Leads Dashboard** | http://localhost:3000/admin/leads |
-| **Backend API** | https://lifestyle-medicine.onrender.com |
-| **Backend Blogs** | https://lifestyle-medicine.onrender.com/blogs |
-| **Backend Leads** | https://lifestyle-medicine.onrender.com/leads |
+| Purpose             | Link                                          |
+| ------------------- | --------------------------------------------- |
+| **Homepage**        | http://localhost:3000                         |
+| **Blog Page**       | http://localhost:3000/blog                    |
+| **Contact Form**    | http://localhost:3000/contact                 |
+| **Admin Dashboard** | http://localhost:3000/admin                   |
+| **Blog Manager**    | http://localhost:3000/admin/blogs             |
+| **Leads Dashboard** | http://localhost:3000/admin/leads             |
+| **Backend API**     | https://lifestyle-medicine.onrender.com       |
+| **Backend Blogs**   | https://lifestyle-medicine.onrender.com/blogs |
+| **Backend Leads**   | https://lifestyle-medicine.onrender.com/leads |
 
 ---
 
 ## 📱 Mobile Friendly
 
 ✅ All pages are fully responsive:
+
 - Admin pages work on mobile
 - Contact form works on mobile
 - Blog pages optimized for all screen sizes
@@ -284,10 +310,12 @@ at /contact   Validation   SQLite DB    Sent to admin email
 ## 🔐 Security Reminder
 
 ⚠️ Current State:
+
 - Admin pages are **public** (anyone can access)
 - No password protection yet
 
 🔒 Production:
+
 - Add authentication to /admin routes
 - Use environment variables for secrets
 - Set up proper database backups
@@ -299,12 +327,14 @@ at /contact   Validation   SQLite DB    Sent to admin email
 Use this to verify everything works:
 
 ### Frontend Pages
+
 - [ ] Homepage loads (http://localhost:3000)
 - [ ] Blog page shows blogs (http://localhost:3000/blog)
 - [ ] Contact form is accessible (http://localhost:3000/contact)
 - [ ] All pages are styled correctly
 
 ### Admin Features
+
 - [ ] Admin dashboard loads (http://localhost:3000/admin)
 - [ ] Can create a new blog (http://localhost:3000/admin/blogs)
 - [ ] New blog appears on blog page (http://localhost:3000/blog)
@@ -313,12 +343,14 @@ Use this to verify everything works:
 - [ ] Admin leads page loads (http://localhost:3000/admin/leads)
 
 ### Lead Submission
+
 - [ ] Can fill and submit contact form
 - [ ] Lead appears in admin dashboard
 - [ ] Admin email received (if configured)
 - [ ] User welcome email received (if configured)
 
 ### Export & Actions
+
 - [ ] Can export leads as CSV
 - [ ] CSV opens in Excel/Sheets
 - [ ] Can click "Reply via Email"
@@ -342,10 +374,12 @@ Use this to verify everything works:
 When you're ready:
 
 1. **Frontend to Vercel**:
+
    - Connect GitHub to Vercel
    - Deploy automatically on every push
 
 2. **Backend Already Live**:
+
    - https://lifestyle-medicine.onrender.com
    - Auto-deploys from GitHub
 
@@ -358,6 +392,7 @@ When you're ready:
 ## 📞 Need Help?
 
 Check these files:
+
 - `ADMIN_PANEL_GUIDE.md` - Complete admin guide
 - `LEADS_WORKFLOW.md` - How leads work
 - `COMPLETE_IMPLEMENTATION.md` - Full implementation details

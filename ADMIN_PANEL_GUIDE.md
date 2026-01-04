@@ -7,11 +7,13 @@ Your website now includes a complete admin dashboard for managing blogs and lead
 ## Admin Features
 
 ### 1. **Admin Dashboard** (`/admin`)
+
 Main admin hub with quick access to all admin features.
 
 **URL**: `http://localhost:3000/admin` (local) or `https://your-domain.com/admin` (production)
 
 **Features**:
+
 - Quick access to blog management
 - Quick access to leads dashboard
 - Configuration tips
@@ -25,6 +27,7 @@ Main admin hub with quick access to all admin features.
 
 1. Go to `/admin/blogs`
 2. Fill in the form:
+
    - **Title**: Blog post title (min 5 characters)
    - **Slug**: URL-friendly name (e.g., "nutrition-tips")
    - **Author**: Your name or doctor name
@@ -53,21 +56,25 @@ Main admin hub with quick access to all admin features.
 ### Blog Best Practices
 
 ✅ **Good Slug Examples**:
+
 - `nutrition-disease-prevention`
 - `sleep-foundation-health`
 - `fitness-movement-life`
 
 ❌ **Bad Slug Examples**:
+
 - `My Blog Post` (spaces, capital letters)
 - `blog-1` (not descriptive)
 - `fitness!!!` (special characters)
 
 ✅ **Finding Free Images**:
+
 - https://unsplash.com (high quality, free)
 - https://pexels.com (free stock photos)
 - https://pixabay.com (free images)
 
 **Example Image URL**:
+
 ```
 https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&h=400&fit=crop&q=80
 ```
@@ -88,6 +95,7 @@ https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&h=400&fit=cro
 ### Filter Leads
 
 Use the filter buttons to view leads by source:
+
 - **All Leads**: Show all leads
 - **Contact**: From contact form
 - **Course**: From course enrollment
@@ -110,6 +118,7 @@ Use the filter buttons to view leads by source:
 3. Open in Excel, Google Sheets, or any spreadsheet app
 
 **Exported Data Includes**:
+
 - ID
 - Name
 - Email
@@ -125,6 +134,7 @@ Use the filter buttons to view leads by source:
 ### What Email Does Your System Send?
 
 1. **Admin Notification Email** (to you)
+
    - Sent when user submits a lead
    - Contains user's name, email, phone, message
    - Beautiful HTML formatted email
@@ -139,17 +149,20 @@ Use the filter buttons to view leads by source:
 ### Setting Up Email (Gmail)
 
 #### Step 1: Enable 2-Step Verification
+
 1. Go to: https://myaccount.google.com/security
 2. Click "2-Step Verification"
 3. Follow the steps to enable it
 
 #### Step 2: Create App Password
+
 1. Go to: https://myaccount.google.com/apppasswords
 2. Select **Mail** and **Windows Computer**
 3. Google generates a 16-character password
 4. Copy this password (remove spaces)
 
 #### Step 3: Update Backend .env
+
 Create or update `.env` file in `backend/` folder:
 
 ```bash
@@ -162,6 +175,7 @@ ADMIN_EMAIL=your-email@gmail.com
 ```
 
 #### Step 4: Restart Backend
+
 1. Stop the backend server
 2. Start it again (it reads the new .env file)
 3. Test by submitting a contact form
@@ -169,6 +183,7 @@ ADMIN_EMAIL=your-email@gmail.com
 ### Using Other Email Providers
 
 #### Outlook/Hotmail
+
 ```bash
 SMTP_SERVER=smtp-mail.outlook.com
 SMTP_PORT=587
@@ -177,6 +192,7 @@ SENDER_PASSWORD=your-outlook-password
 ```
 
 #### Yahoo Mail
+
 ```bash
 SMTP_SERVER=smtp.mail.yahoo.com
 SMTP_PORT=587
@@ -185,6 +201,7 @@ SENDER_PASSWORD=your-yahoo-password
 ```
 
 #### Custom Email Server
+
 ```bash
 SMTP_SERVER=your-mail-server.com
 SMTP_PORT=587  # or 465 for SSL
@@ -200,13 +217,15 @@ SENDER_PASSWORD=your-password
 
 **Issue**: "Authentication failed"
 
-**Solution**: 
+**Solution**:
+
 - Gmail users: Use app password, not regular password
 - Check email/password are copied exactly (no extra spaces)
 
 **Issue**: "Failed to connect to SMTP server"
 
 **Solution**:
+
 - Check SMTP_SERVER and SMTP_PORT are correct
 - Make sure port 587 is not blocked by firewall
 - Some networks block SMTP - try different email provider
@@ -247,6 +266,7 @@ SENDER_PASSWORD=your-password
 ## Database
 
 ### Blogs Table
+
 ```sql
 CREATE TABLE blogs (
   id INTEGER PRIMARY KEY,
@@ -264,6 +284,7 @@ CREATE TABLE blogs (
 ```
 
 ### Leads Table
+
 ```sql
 CREATE TABLE leads (
   id INTEGER PRIMARY KEY,
@@ -337,17 +358,18 @@ GET /leads/{lead_id}
 
 Each lead has a **source** field showing where it came from:
 
-| Source | Meaning |
-|--------|---------|
-| `contact` | Direct contact form |
-| `course` | Course enrollment |
-| `hero` | Hero section CTA |
-| `newsletter` | Newsletter signup |
-| `blog` | Blog engagement |
+| Source       | Meaning             |
+| ------------ | ------------------- |
+| `contact`    | Direct contact form |
+| `course`     | Course enrollment   |
+| `hero`       | Hero section CTA    |
+| `newsletter` | Newsletter signup   |
+| `blog`       | Blog engagement     |
 
 ### Export Data
 
 Use the CSV export feature to analyze leads in:
+
 - Microsoft Excel
 - Google Sheets
 - Spreadsheet software
@@ -371,10 +393,12 @@ Example Analysis:
 ⚠️ **Important**: The admin pages are currently **public**. In production, you should:
 
 1. **Add Authentication**:
+
    - Username/password for admin panel
    - JWT tokens for API protection
 
 2. **Restrict Endpoints**:
+
    - Only authenticated users can POST blogs
    - Only authenticated users can GET leads
 
@@ -431,6 +455,7 @@ A: Yes, anyone with the URL can access it (no authentication by default).
 ## Support
 
 For issues or questions:
+
 1. Check logs at backend Render dashboard
 2. Review email configuration in .env
 3. Verify database connection

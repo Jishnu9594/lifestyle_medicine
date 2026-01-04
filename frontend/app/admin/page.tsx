@@ -16,7 +16,9 @@ export default function AdminDashboard() {
           <Container>
             <div className="mb-12">
               <h1 className="heading-1 mb-2 gradient-text">Admin Dashboard</h1>
-              <p className="text-body text-muted">Manage your website content and leads</p>
+              <p className="text-body text-muted">
+                Manage your website content and leads
+              </p>
             </div>
 
             {/* Admin Features Grid */}
@@ -29,8 +31,8 @@ export default function AdminDashboard() {
                   </div>
                   <h2 className="heading-2 mb-3">Blog Management</h2>
                   <p className="text-muted mb-6">
-                    Create, edit, and manage your blog posts. Add new articles, update
-                    existing ones, and control publication status.
+                    Create, edit, and manage your blog posts. Add new articles,
+                    update existing ones, and control publication status.
                   </p>
                   <span className="text-primary-500 font-semibold">
                     Go to Blog Manager →
@@ -46,8 +48,9 @@ export default function AdminDashboard() {
                   </div>
                   <h2 className="heading-2 mb-3">Leads Dashboard</h2>
                   <p className="text-muted mb-6">
-                    View all leads from your contact form and course enrollments. Filter
-                    by source, export data, and manage follow-ups.
+                    View all leads from your contact form and course
+                    enrollments. Filter by source, export data, and manage
+                    follow-ups.
                   </p>
                   <span className="text-primary-500 font-semibold">
                     Go to Leads Dashboard →
@@ -60,11 +63,26 @@ export default function AdminDashboard() {
             <Card className="p-8 bg-gradient-to-br from-primary-50 to-primary-100 border-2 border-primary-200">
               <h3 className="heading-2 mb-4">Quick Tips</h3>
               <ul className="space-y-3 text-muted">
-                <li>✅ <strong>Blog Slugs:</strong> Use lowercase with hyphens (e.g., "my-blog-post")</li>
-                <li>✅ <strong>Blog Categories:</strong> Keep consistent categories for better organization</li>
-                <li>✅ <strong>Lead Emails:</strong> You'll receive notifications when users submit leads</li>
-                <li>✅ <strong>Export Leads:</strong> Use CSV export to analyze data in spreadsheets</li>
-                <li>✅ <strong>Message Follow-up:</strong> Click "Reply via Email" to respond to leads directly</li>
+                <li>
+                  ✅ <strong>Blog Slugs:</strong> Use lowercase with hyphens
+                  (e.g., "my-blog-post")
+                </li>
+                <li>
+                  ✅ <strong>Blog Categories:</strong> Keep consistent
+                  categories for better organization
+                </li>
+                <li>
+                  ✅ <strong>Lead Emails:</strong> You'll receive notifications
+                  when users submit leads
+                </li>
+                <li>
+                  ✅ <strong>Export Leads:</strong> Use CSV export to analyze
+                  data in spreadsheets
+                </li>
+                <li>
+                  ✅ <strong>Message Follow-up:</strong> Click "Reply via Email"
+                  to respond to leads directly
+                </li>
               </ul>
             </Card>
 
@@ -75,25 +93,36 @@ export default function AdminDashboard() {
                 <Card className="p-6">
                   <h4 className="font-semibold mb-3">📧 Email Configuration</h4>
                   <p className="text-sm text-muted mb-4">
-                    Make sure your backend has email configured in the .env file to receive lead notifications.
+                    Make sure your backend has email configured in the .env file
+                    to receive lead notifications.
                   </p>
-                  <a href="#email-setup" className="text-primary-500 text-sm font-semibold">
+                  <a
+                    href="#email-setup"
+                    className="text-primary-500 text-sm font-semibold"
+                  >
                     View setup guide →
                   </a>
                 </Card>
                 <Card className="p-6">
                   <h4 className="font-semibold mb-3">🖼️ Image URLs</h4>
                   <p className="text-sm text-muted mb-4">
-                    Use full URLs (https://...) for blog images. You can use free images from Unsplash.
+                    Use full URLs (https://...) for blog images. You can use
+                    free images from Unsplash.
                   </p>
-                  <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer" className="text-primary-500 text-sm font-semibold">
+                  <a
+                    href="https://unsplash.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary-500 text-sm font-semibold"
+                  >
                     Get free images →
                   </a>
                 </Card>
                 <Card className="p-6">
                   <h4 className="font-semibold mb-3">📱 Responsive Design</h4>
                   <p className="text-sm text-muted mb-4">
-                    All admin pages are fully responsive and work on mobile devices.
+                    All admin pages are fully responsive and work on mobile
+                    devices.
                   </p>
                 </Card>
               </div>

@@ -15,13 +15,16 @@ Your **Lifestyle Medicine Academy** website is now **fully functional** with:
 ## 🚀 Quick Start (Next 10 Minutes)
 
 ### Step 1: Start Your Frontend (if not running)
+
 ```bash
 cd frontend
 npm run dev
 ```
+
 Open: http://localhost:3000
 
 ### Step 2: Create Your First Blog
+
 1. Go to: http://localhost:3000/admin/blogs
 2. Fill in the form:
    - Title: "Benefits of Healthy Living"
@@ -36,6 +39,7 @@ Open: http://localhost:3000
 4. Go to http://localhost:3000/blog - See your blog there!
 
 ### Step 3: Test Lead Submission
+
 1. Go to: http://localhost:3000/contact
 2. Fill out the form with your info
 3. Click "Send Message"
@@ -44,6 +48,7 @@ Open: http://localhost:3000
 6. Your lead is there! Click it to see full details.
 
 ### Step 4: Set Up Email (Optional but Recommended)
+
 1. Get Gmail App Password: https://myaccount.google.com/apppasswords
 2. Create file `backend/.env`:
    ```
@@ -61,6 +66,7 @@ Open: http://localhost:3000
 ## 🎨 What You Have - Visual Tour
 
 ### Public Website (Open to Everyone)
+
 ```
 http://localhost:3000
 ├── Homepage (/) ................... Hero, features, stats
@@ -74,6 +80,7 @@ http://localhost:3000
 ```
 
 ### Admin Dashboard (For You Only)
+
 ```
 http://localhost:3000/admin
 ├── Admin Hub (/admin) ............. Overview & help
@@ -97,6 +104,7 @@ http://localhost:3000/admin
 ## 💡 Common Tasks
 
 ### Create Another Blog
+
 ```
 1. Go to http://localhost:3000/admin/blogs
 2. Fill the form
@@ -105,6 +113,7 @@ http://localhost:3000/admin
 ```
 
 ### Respond to a Lead
+
 ```
 1. Go to http://localhost:3000/admin/leads
 2. Click on the lead
@@ -114,6 +123,7 @@ http://localhost:3000/admin
 ```
 
 ### Export Leads to Excel
+
 ```
 1. Go to http://localhost:3000/admin/leads
 2. (Optional) Filter by source
@@ -123,6 +133,7 @@ http://localhost:3000/admin
 ```
 
 ### Edit a Blog You Created
+
 ```
 1. Go to http://localhost:3000/admin/blogs
 2. Find your blog in the list
@@ -132,6 +143,7 @@ http://localhost:3000/admin
 ```
 
 ### Delete a Blog (if needed)
+
 ```
 1. Go to http://localhost:3000/admin/blogs
 2. Find the blog
@@ -146,6 +158,7 @@ http://localhost:3000/admin
 When someone submits the contact form:
 
 **Email 1 - Goes to YOU**
+
 ```
 Subject: 🔔 New Lead: John Doe
 From: your-email@gmail.com
@@ -162,6 +175,7 @@ I'm interested in learning more about your courses.
 ```
 
 **Email 2 - Goes to THEM**
+
 ```
 Subject: Thank you for contacting Lifestyle Medicine Academy!
 From: your-email@gmail.com
@@ -169,7 +183,7 @@ To: john@example.com
 
 "Hi John,
 
-Thank you for contacting us! We received your message and will get back 
+Thank you for contacting us! We received your message and will get back
 to you within 24 hours with more information.
 
 Check out our blog: https://...
@@ -183,6 +197,7 @@ The Lifestyle Medicine Academy Team"
 ## 🎯 Sample Data Available
 
 ### Current Blogs (in backend):
+
 1. **Introduction to Lifestyle Medicine**
    - Slug: intro-lifestyle-medicine
    - Author: Dr. Lisa Park
@@ -192,6 +207,7 @@ The Lifestyle Medicine Academy Team"
 View at: https://lifestyle-medicine.onrender.com/blogs
 
 ### Current Leads (in backend):
+
 ```
 1. John Doe - john@example.com - contact form
 2. Sarah Johnson - sarah@example.com - course enrollment
@@ -205,39 +221,44 @@ View at: http://localhost:3000/admin/leads (or API: https://lifestyle-medicine.o
 
 Read these for more information:
 
-| File | What It Covers | Read Time |
-|------|---|---|
-| **QUICK_REFERENCE.md** | All URLs and quick access | 5 min |
-| **ADMIN_PANEL_GUIDE.md** | Complete admin guide | 15 min |
-| **IMPLEMENTATION_COMPLETE.md** | What was built | 10 min |
-| **LEADS_WORKFLOW.md** | How leads work end-to-end | 10 min |
-| **COMPLETE_IMPLEMENTATION.md** | Full project overview | 20 min |
-| **BACKEND_DEPLOYMENT_GUIDE.md** | How to deploy | 10 min |
+| File                            | What It Covers            | Read Time |
+| ------------------------------- | ------------------------- | --------- |
+| **QUICK_REFERENCE.md**          | All URLs and quick access | 5 min     |
+| **ADMIN_PANEL_GUIDE.md**        | Complete admin guide      | 15 min    |
+| **IMPLEMENTATION_COMPLETE.md**  | What was built            | 10 min    |
+| **LEADS_WORKFLOW.md**           | How leads work end-to-end | 10 min    |
+| **COMPLETE_IMPLEMENTATION.md**  | Full project overview     | 20 min    |
+| **BACKEND_DEPLOYMENT_GUIDE.md** | How to deploy             | 10 min    |
 
 ---
 
 ## 🔧 Troubleshooting
 
 ### "Admin pages not loading"
+
 - Make sure frontend is running: `npm run dev` in frontend folder
 - Check URL: http://localhost:3000 (not 3001)
 
 ### "Blogs not showing on /blog page"
+
 - Backend must be running
 - Should see "Introduction to Lifestyle Medicine" automatically
 
 ### "Emails not sending"
+
 - Check .env file exists in backend/ folder
 - Verify email credentials are correct
 - Restart backend after creating .env
 - Check Gmail app password (not regular password)
 
 ### "Blog created but can't edit it"
+
 - Go back to /admin/blogs
 - Scroll down to "All Blog Posts"
 - Find your blog and click "Edit"
 
 ### "Lead form not submitting"
+
 - Check browser console (F12)
 - Make sure backend is running
 - Verify email validation (needs valid email)
@@ -247,35 +268,41 @@ Read these for more information:
 ## ✨ What Makes This Special
 
 ### 🎨 **Beautiful Design**
+
 - Light peach color theme (#FF9664)
 - Modern, clean interface
 - Fully responsive (works on mobile/tablet/desktop)
 - Smooth animations and transitions
 
 ### ⚡ **Fully Functional**
+
 - No dummy pages
 - Everything actually works
 - Real database storage
 - Real API integration
 
 ### 📧 **Email Notifications**
+
 - Automatic emails when leads submit
 - Beautiful HTML formatted emails
 - Customizable email provider
 
 ### 👨‍💼 **Admin Panel**
+
 - Complete blog management
 - Lead tracking with analytics
 - CSV export capability
 - Email/WhatsApp responses
 
 ### 🔒 **Secure**
+
 - Environment variables for secrets
 - Validated form inputs
 - Pydantic data validation
 - CORS configured properly
 
 ### 📚 **Well Documented**
+
 - 5 comprehensive guides
 - Step-by-step instructions
 - Troubleshooting sections
@@ -286,18 +313,21 @@ Read these for more information:
 ## 🎓 Next Steps
 
 ### This Week:
+
 - [ ] Create your first blog
 - [ ] Test contact form
 - [ ] Configure email (.env)
 - [ ] Check leads dashboard
 
 ### This Month:
+
 - [ ] Add your real blog content
 - [ ] Add your course information
 - [ ] Update About section
 - [ ] Deploy to Vercel (optional)
 
 ### Ongoing:
+
 - [ ] Post blogs regularly
 - [ ] Respond to leads within 24 hours
 - [ ] Track conversions
@@ -323,35 +353,40 @@ You now have a **production-ready website** with:
 ## 🆘 Need Help?
 
 ### For Admin Questions:
+
 → Read **ADMIN_PANEL_GUIDE.md**
 
 ### For Leads:
+
 → Read **LEADS_WORKFLOW.md**
 
 ### For Email Setup:
+
 → See **ADMIN_PANEL_GUIDE.md** > Email Configuration
 
 ### For Deployment:
+
 → Read **BACKEND_DEPLOYMENT_GUIDE.md**
 
 ### For Everything:
+
 → Read **COMPLETE_IMPLEMENTATION.md**
 
 ---
 
 ## 🔗 All URLs (Bookmark These!)
 
-| Purpose | Local | Live |
-|---------|-------|------|
-| **Homepage** | http://localhost:3000 | - |
-| **Blog Page** | http://localhost:3000/blog | - |
-| **Contact Form** | http://localhost:3000/contact | - |
-| **Admin Hub** | http://localhost:3000/admin | - |
-| **Blog Manager** | http://localhost:3000/admin/blogs | - |
-| **Leads Dashboard** | http://localhost:3000/admin/leads | - |
-| **Backend API** | http://localhost:8000 | https://lifestyle-medicine.onrender.com |
-| **Blogs (API)** | - | https://lifestyle-medicine.onrender.com/blogs |
-| **Leads (API)** | - | https://lifestyle-medicine.onrender.com/leads |
+| Purpose             | Local                             | Live                                          |
+| ------------------- | --------------------------------- | --------------------------------------------- |
+| **Homepage**        | http://localhost:3000             | -                                             |
+| **Blog Page**       | http://localhost:3000/blog        | -                                             |
+| **Contact Form**    | http://localhost:3000/contact     | -                                             |
+| **Admin Hub**       | http://localhost:3000/admin       | -                                             |
+| **Blog Manager**    | http://localhost:3000/admin/blogs | -                                             |
+| **Leads Dashboard** | http://localhost:3000/admin/leads | -                                             |
+| **Backend API**     | http://localhost:8000             | https://lifestyle-medicine.onrender.com       |
+| **Blogs (API)**     | -                                 | https://lifestyle-medicine.onrender.com/blogs |
+| **Leads (API)**     | -                                 | https://lifestyle-medicine.onrender.com/leads |
 
 ---
 

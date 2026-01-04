@@ -7,105 +7,65 @@ import { Section } from "@/components/Section";
 import { FadeIn } from "@/components/FadeIn";
 import { Card } from "@/components/Card";
 import { HeroImage } from "@/components/HeroImage";
-import { CourseImage } from "@/components/CourseImage";
 import { ModernStat } from "@/components/ModernStat";
 import { ModernFeatureCard } from "@/components/ModernFeatureCard";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Lifestyle Medicine Academy | Learn Health & Wellness",
+  title: "Lifestyle Medicine Academy India | Education. Consultation. Transformation.",
   description:
-    "Transform your health with expert-led lifestyle medicine courses. Learn nutrition, fitness, sleep optimization, and stress management from certified professionals.",
+    "A clinician-led institution advancing Lifestyle Medicine education, certification, and implementation across healthcare, education, and communities. International IBLM certification, professional consultation, and turnkey solutions.",
   openGraph: {
-    title: "Lifestyle Medicine Academy",
+    title: "Lifestyle Medicine Academy India",
     description:
-      "Expert-led courses in lifestyle medicine and health optimization.",
+      "Clinician-led education and professional services for Lifestyle Medicine. IBLM certification, workforce training, and implementation support.",
     url: "https://lifestylemedicine.org",
     type: "website",
   },
 };
 
 export default function Home() {
-  const featuredCourses = [
-    {
-      id: 1,
-      title: "Nutrition Fundamentals",
-      level: "Beginner",
-      image:
-        "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500&h=300&fit=crop&q=80",
-      fallbackImage:
-        "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=500&h=300&fit=crop&q=80",
-      students: "2,340",
-      rating: 4.9,
-      duration: "8 weeks",
-    },
-    {
-      id: 2,
-      title: "Fitness & Movement Science",
-      level: "Intermediate",
-      image:
-        "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&h=300&fit=crop&q=80",
-      fallbackImage:
-        "https://images.unsplash.com/photo-1574680178050-55c6a6a96e0a?w=500&h=300&fit=crop&q=80",
-      students: "1,890",
-      rating: 4.8,
-      duration: "10 weeks",
-    },
-    {
-      id: 3,
-      title: "Sleep Optimization",
-      level: "Beginner",
-      image:
-        "https://images.unsplash.com/photo-1541480527022-8158e7deaf63?w=500&h=300&fit=crop&q=80",
-      fallbackImage:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=300&fit=crop&q=80",
-      students: "1,560",
-      rating: 4.9,
-      duration: "6 weeks",
-    },
-  ];
-
   const whyChooseUs = [
     {
       iconType: "instructor",
-      title: "Expert Instructors",
+      title: "International Certification",
       description:
-        "Learn from certified lifestyle medicine professionals with 15+ years experience.",
+        "Earn the IBLM Diploma in Lifestyle Medicine - the same certification offered internationally by the International Board of Lifestyle Medicine (USA).",
       color: "from-blue-400 to-blue-600",
     },
     {
       iconType: "book",
-      title: "Comprehensive Curriculum",
+      title: "Evidence-Based Curriculum",
       description:
-        "300+ lessons covering nutrition, fitness, sleep, stress management, and more.",
+        "Comprehensive education covering all core Lifestyle Medicine domains: nutrition, fitness, sleep, stress management, and behaviour change communication.",
       color: "from-green-400 to-green-600",
     },
     {
       iconType: "globe",
-      title: "Flexible Learning",
+      title: "Global Standards",
       description:
-        "Learn at your own pace with lifetime access to all course materials.",
+        "Delivered in collaboration with International Board of Lifestyle Medicine (USA), European Lifestyle Medicine Organisation, and WHO Collaborating Centre.",
       color: "from-purple-400 to-purple-600",
     },
     {
       iconType: "trophy",
-      title: "Certified Courses",
+      title: "Professional Implementation",
       description:
-        "Earn recognized certificates upon course completion to boost your credentials.",
+        "Turnkey solutions for establishing Lifestyle Medicine clinics, hospital services, and institutional programmes.",
       color: "from-orange-400 to-orange-600",
     },
     {
       iconType: "chat",
-      title: "Community Support",
+      title: "Expert Leadership",
       description:
-        "Join thousands of students in our active learning community with mentorship.",
+        "Clinician-led by Dr Sunil Kumar (Lifestyle Medicine Physician) and Dr Arun Das (clinician leader and education advocate).",
       color: "from-pink-400 to-pink-600",
     },
     {
       iconType: "chart",
-      title: "Real Results",
+      title: "Institutional Partnerships",
       description:
-        "95% of students report significant health improvements within 90 days.",
+        "We partner with schools, colleges, medical institutions, hospitals, and organisations for curriculum integration and workforce training.",
       color: "from-red-400 to-red-600",
     },
   ];
@@ -163,21 +123,25 @@ export default function Home() {
                   </div>
                   <h1 className="heading-1 mb-6">
                     <span className="gradient-text">
-                      Master Lifestyle Medicine
+                      Advancing Health Through
                     </span>{" "}
-                    and Transform Health
+                    Lifestyle Medicine
                   </h1>
                   <p className="text-body mx-0 mb-8 text-lg">
-                    Learn evidence-based strategies for nutrition, fitness,
-                    sleep, and stress management. Join thousands of students
-                    transforming their health and building thriving careers.
+                    For Professionals. For Institutions. For Communities.
+                  </p>
+                  <p className="text-body mx-0 mb-8">
+                    Lifestyle Medicine Academy India is a clinician-led education and professional services organisation delivering internationally recognised Lifestyle Medicine education and certification, workforce training, and turnkey implementation support.
+                  </p>
+                  <p className="text-body mx-0 mb-8">
+                    We work with healthcare professionals, hospitals, educational institutions, organisations, and communities to embed evidence-based Lifestyle Medicine into real-world practice.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Button variant="primary" size="lg">
-                      <Link href="/courses">Explore Courses</Link>
+                      <Link href="/courses">View Our Programs</Link>
                     </Button>
                     <Button variant="secondary" size="lg">
-                      <Link href="/contact">Get Started Free</Link>
+                      <Link href="/contact">Get in Touch</Link>
                     </Button>
                   </div>
 
@@ -229,69 +193,74 @@ export default function Home() {
           <Container>
             <FadeIn delay={0.2}>
               <div className="text-center mb-16">
-                <h2 className="heading-2 mb-4">Featured Courses</h2>
+                <h2 className="heading-2 mb-4">What We Offer</h2>
                 <p className="text-body mx-auto max-w-2xl">
-                  Start with our most popular courses loved by thousands of
-                  students worldwide.
+                  International certification, professional education, consultation services, and institutional partnerships.
                 </p>
               </div>
             </FadeIn>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              {featuredCourses.map((course, index) => (
-                <FadeIn key={course.id} delay={0.3 + index * 0.1}>
-                  <Card
-                    hover
-                    className="overflow-hidden flex flex-col h-full group"
-                  >
-                    {/* Image with Animation */}
-                    <div className="relative h-48 overflow-hidden bg-gray-200">
-                      <CourseImage
-                        src={course.image}
-                        alt={course.title}
-                        fallbackSrc={course.fallbackImage}
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      <div className="absolute top-4 right-4 bg-primary-600 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-lg">
-                        {course.level}
-                      </div>
-                    </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+              <FadeIn delay={0.3}>
+                <Card hover className="p-8">
+                  <h3 className="heading-3 mb-4">International Certification & Professional Education</h3>
+                  <ul className="space-y-3 text-body">
+                    <li>✓ Diploma in Lifestyle Medicine (IBLM Certification)</li>
+                    <li>✓ Foundation Course in Lifestyle Medicine (WHOCC endorsed)</li>
+                    <li>✓ Lifestyle Medicine for Medical Students & Trainees</li>
+                    <li>✓ Lifestyle Medicine for Allied Health Professionals</li>
+                    <li>✓ Faculty Development & Train-the-Trainer Programmes</li>
+                    <li>✓ Burnout Prevention & Clinician Wellbeing Programmes</li>
+                  </ul>
+                </Card>
+              </FadeIn>
 
-                    <div className="p-6 flex flex-col flex-grow">
-                      <h3 className="heading-3 mb-3">{course.title}</h3>
+              <FadeIn delay={0.35}>
+                <Card hover className="p-8">
+                  <h3 className="heading-3 mb-4">Public Lifestyle Medicine Education</h3>
+                  <p className="text-body mb-4">
+                    Lifestyle Medicine is for everyone, not only clinicians.
+                  </p>
+                  <ul className="space-y-3 text-body">
+                    <li>✓ Introduction to Lifestyle Medicine</li>
+                    <li>✓ Lifestyle-based Chronic Disease Prevention</li>
+                    <li>✓ Workplace Wellbeing Programmes</li>
+                    <li>✓ Community Talks and Workshops</li>
+                  </ul>
+                </Card>
+              </FadeIn>
 
-                      <div className="mb-4 flex justify-between items-center text-sm text-muted">
-                        <span>⭐ {course.rating}</span>
-                        <span>{course.students} students</span>
-                      </div>
+              <FadeIn delay={0.4}>
+                <Card hover className="p-8">
+                  <h3 className="heading-3 mb-4">Professional Consultation & Turnkey Services</h3>
+                  <ul className="space-y-3 text-body">
+                    <li>✓ Establishing Lifestyle Medicine Clinics</li>
+                    <li>✓ Hospital-based Lifestyle Medicine Services</li>
+                    <li>✓ Preventive Health Pathways</li>
+                    <li>✓ Workforce Training & Upskilling</li>
+                    <li>✓ Curriculum Development for Medical Colleges</li>
+                    <li>✓ Institutional Programme Design</li>
+                  </ul>
+                </Card>
+              </FadeIn>
 
-                      <div className="mb-6 text-sm font-semibold text-primary-600">
-                        ⏱️ {course.duration}
-                      </div>
-
-                      <Link
-                        href={`/contact?course=${encodeURIComponent(
-                          course.title
-                        )}`}
-                        className="w-full mt-auto"
-                      >
-                        <Button
-                          variant="primary"
-                          size="md"
-                          className="w-full mt-auto"
-                        >
-                          Enroll Now
-                        </Button>
-                      </Link>
-                    </div>
-                  </Card>
-                </FadeIn>
-              ))}
+              <FadeIn delay={0.45}>
+                <Card hover className="p-8">
+                  <h3 className="heading-3 mb-4">Schools, Colleges & Educational Institutions</h3>
+                  <ul className="space-y-3 text-body">
+                    <li>✓ Preventive Lifestyle Medicine Education</li>
+                    <li>✓ Student Wellbeing & Resilience Programmes</li>
+                    <li>✓ Faculty Training</li>
+                    <li>✓ Curriculum Integration</li>
+                    <li>✓ Age-appropriate, Educational, Non-clinical Programmes</li>
+                  </ul>
+                </Card>
+              </FadeIn>
             </div>
 
             <div className="text-center">
               <Button variant="secondary" size="lg">
-                <Link href="/courses">View All Courses</Link>
+                <Link href="/courses">Explore All Programs</Link>
               </Button>
             </div>
           </Container>

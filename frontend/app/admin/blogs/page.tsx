@@ -125,7 +125,9 @@ export default function AdminBlogsPage() {
       <main className="min-h-screen overflow-hidden bg-gradient-to-br from-primary-50 to-white">
         <Section spacing="lg">
           <Container>
-            <h1 className="heading-1 mb-2 gradient-text">Admin - Blog Management</h1>
+            <h1 className="heading-1 mb-2 gradient-text">
+              Admin - Blog Management
+            </h1>
             <p className="text-body text-muted mb-12">
               Create, edit, and manage your blog posts
             </p>
@@ -240,7 +242,9 @@ export default function AdminBlogsPage() {
 
             {/* Blogs List */}
             <div>
-              <h2 className="heading-2 mb-6">All Blog Posts ({blogs.length})</h2>
+              <h2 className="heading-2 mb-6">
+                All Blog Posts ({blogs.length})
+              </h2>
 
               {loading ? (
                 <div className="text-center py-12">
@@ -248,7 +252,9 @@ export default function AdminBlogsPage() {
                 </div>
               ) : blogs.length === 0 ? (
                 <Card className="text-center py-12">
-                  <p className="text-muted text-lg">No blogs yet. Create your first blog post!</p>
+                  <p className="text-muted text-lg">
+                    No blogs yet. Create your first blog post!
+                  </p>
                 </Card>
               ) : (
                 <div className="space-y-4">
@@ -267,14 +273,21 @@ export default function AdminBlogsPage() {
                             <div className="flex-1">
                               <h3 className="heading-3 mb-2">{blog.title}</h3>
                               <p className="text-sm text-muted mb-2">
-                                <span className="font-semibold">Slug:</span> {blog.slug}
+                                <span className="font-semibold">Slug:</span>{" "}
+                                {blog.slug}
                               </p>
                               <p className="text-sm text-muted mb-2">
-                                <span className="font-semibold">Author:</span> {blog.author || "N/A"}
+                                <span className="font-semibold">Author:</span>{" "}
+                                {blog.author || "N/A"}
                                 {" | "}
-                                <span className="font-semibold">Category:</span> {blog.category || "N/A"}
+                                <span className="font-semibold">
+                                  Category:
+                                </span>{" "}
+                                {blog.category || "N/A"}
                               </p>
-                              <p className="text-muted line-clamp-2">{blog.excerpt}</p>
+                              <p className="text-muted line-clamp-2">
+                                {blog.excerpt}
+                              </p>
                               <div className="mt-3 flex items-center gap-2">
                                 {blog.published && (
                                   <span className="inline-block px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded-full">
@@ -282,7 +295,9 @@ export default function AdminBlogsPage() {
                                   </span>
                                 )}
                                 <span className="text-xs text-muted">
-                                  {new Date(blog.created_at).toLocaleDateString()}
+                                  {new Date(
+                                    blog.created_at
+                                  ).toLocaleDateString()}
                                 </span>
                               </div>
                             </div>

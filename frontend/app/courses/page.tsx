@@ -13,122 +13,185 @@ export default function CoursesPage() {
   const courses = [
     {
       id: 1,
-      title: "Nutrition Fundamentals",
+      title: "Diploma in Lifestyle Medicine (IBLM)",
       description:
-        "Master evidence-based nutrition principles and transform your relationship with food.",
-      level: "Beginner",
-      duration: "8 weeks",
-      students: "2,340",
-      rating: 4.9,
+        "International certification in Lifestyle Medicine issued by the International Board of Lifestyle Medicine (USA). For medical doctors, allied healthcare professionals, and public health professionals.",
+      level: "Professional",
+      duration: "Blended",
+      students: "500+",
+      rating: 5,
       image:
         "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500&h=300&fit=crop",
-      price: "$299",
-      instructor: "Dr. Sarah Mitchell",
-      lessons: 32,
+      price: "Contact for pricing",
+      instructor: "Dr Sunil Kumar & Faculty",
+      lessons: 60,
+      isNew: true,
+      features: [
+        "Internationally recognised IBLM certification",
+        "Evidence-based Lifestyle Medicine curriculum",
+        "All core Lifestyle Medicine domains covered",
+        "Clinically relevant and practice-oriented",
+        "Blended delivery: online learning, live sessions, mentorship",
+        "Global standards aligned with IBLM requirements",
+      ],
+      whoShouldJoin:
+        "Medical doctors, allied healthcare professionals, public health professionals (as per IBLM requirements)",
+      aboutCourse:
+        "The Diploma in Lifestyle Medicine is the International Board of Lifestyle Medicine (IBLM) Certification, issued by IBLM (USA). This is the same certification offered internationally - no separate 'aligned' version.",
     },
     {
       id: 2,
-      title: "Fitness & Movement Science",
+      title: "Foundation Course in Lifestyle Medicine",
       description:
-        "Design effective exercise programs tailored to individual health goals and fitness levels.",
-      level: "Intermediate",
-      duration: "10 weeks",
-      students: "1,890",
-      rating: 4.8,
-      image:
-        "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&h=300&fit=crop",
-      price: "$349",
-      instructor: "Coach James Chen",
-      lessons: 40,
-    },
-    {
-      id: 3,
-      title: "Sleep Optimization & Recovery",
-      description:
-        "Unlock the power of quality sleep and master recovery techniques for optimal health.",
-      level: "Beginner",
-      duration: "6 weeks",
-      students: "1,560",
-      rating: 4.9,
-      image:
-        "https://images.unsplash.com/photo-1541480527022-8158e7deaf63?w=500&h=300&fit=crop",
-      price: "$249",
-      instructor: "Dr. Emma Rodriguez",
-      lessons: 24,
-    },
-    {
-      id: 4,
-      title: "Stress Management & Mindfulness",
-      description:
-        "Build resilience and mental wellness through proven stress management techniques.",
-      level: "Beginner",
-      duration: "7 weeks",
-      students: "2,150",
-      rating: 4.9,
-      image:
-        "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=500&h=300&fit=crop",
-      price: "$279",
-      instructor: "Dr. Lisa Chen",
-      lessons: 28,
-    },
-    {
-      id: 5,
-      title: "Chronic Disease Prevention",
-      description:
-        "Learn to prevent and reverse chronic conditions through lifestyle interventions.",
-      level: "Advanced",
-      duration: "12 weeks",
-      students: "980",
-      rating: 4.95,
-      image:
-        "https://images.unsplash.com/photo-1576091160550-112173f7f869?w=500&h=300&fit=crop",
-      price: "$499",
-      instructor: "Dr. Michael Johnson",
-      lessons: 48,
-    },
-    {
-      id: 6,
-      title: "Holistic Health Coaching",
-      description:
-        "Become a certified health coach and guide others toward sustainable wellness.",
-      level: "Advanced",
-      duration: "16 weeks",
-      students: "750",
-      rating: 4.92,
-      image:
-        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&h=300&fit=crop",
-      price: "$799",
-      instructor: "Dr. Amanda Lee",
-      lessons: 64,
-    },
-    {
-      id: 7,
-      title: "Foundation Course in Lifestyle Medicine (FCLM)",
-      description:
-        "A comprehensive 3-month online program designed for Indian doctors to upskill in Lifestyle Medicine. Includes video modules, live sessions, and clinic setup guidance.",
+        "Endorsed and evaluated by WHO Collaborating Centre. Introduction to evidence-based Lifestyle Medicine principles and application.",
       level: "Professional",
       duration: "3 months",
       students: "500+",
       rating: 4.95,
       image:
-        "https://images.unsplash.com/photo-1579154204601-01d82b06baa8?w=500&h=300&fit=crop",
-      price: "$599",
-      instructor: "Mediwell Health Academy India",
+        "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&h=300&fit=crop",
+      price: "Contact for pricing",
+      instructor: "Dr Sunil Kumar & Faculty",
       lessons: 50,
-      isNew: true,
       features: [
-        "20+ hours of high-quality video modules",
-        "Live online sessions for Q&A and group interaction",
-        "Downloadable course materials and workbooks",
-        "Case-based reflections from real clinical practice",
-        "Clinic setup guidance from expert faculty",
-        "Certificate of Completion from Mediwell Health Academy India",
-        "Optional Dual Certification from European Lifestyle Medicine Society",
+        "WHO Collaborating Centre endorsed",
+        "20+ hours of video modules",
+        "Live online sessions and Q&A",
+        "Case-based clinical reflections",
+        "Downloadable materials and workbooks",
+        "Certificate of Completion",
+        "Optional dual certification from ELMO",
       ],
       whoShouldJoin:
-        "MBBS and above (MD/MS, DNB, PG Diploma holders). Ideal for physicians, family medicine practitioners, diabetologists, and public health professionals.",
+        "Healthcare professionals, medical students, allied health professionals, public health professionals",
       aboutCourse:
-        "FCLM is designed specifically for Indian doctors to upskill in the science and application of Lifestyle Medicine. With a blend of video modules, live interactive sessions, practical case reflections, and clinic setup guidance, this course uniquely addresses lifestyle-related disorders through preventive, evidence-based strategies.",
+        "Foundation course in Lifestyle Medicine endorsed by WHO Collaborating Centre, School of Primary Care and Public Health at Imperial College London.",
+    },
+    {
+      id: 3,
+      title: "Lifestyle Medicine for Medical Students & Trainees",
+      description:
+        "Specialised programme for medical students and resident doctors to integrate Lifestyle Medicine into clinical training.",
+      level: "Professional",
+      duration: "Varies",
+      students: "300+",
+      rating: 4.9,
+      image:
+        "https://images.unsplash.com/photo-1541480527022-8158e7deaf63?w=500&h=300&fit=crop",
+      price: "Contact for pricing",
+      instructor: "Dr Sunil Kumar & Faculty",
+      lessons: 40,
+      features: [
+        "Tailored for medical education context",
+        "Evidence-based curriculum",
+        "Clinical case integration",
+        "Mentorship from faculty",
+        "Career advancement focus",
+      ],
+      whoShouldJoin: "Medical students, resident doctors, PG trainees",
+      aboutCourse:
+        "Specialised Lifestyle Medicine education designed for integration into medical student and trainee curricula.",
+    },
+    {
+      id: 4,
+      title: "Lifestyle Medicine for Allied Health Professionals",
+      description:
+        "Professional programme for nurses, physiotherapists, dietitians, and other allied health professionals.",
+      level: "Professional",
+      duration: "Varies",
+      students: "250+",
+      rating: 4.9,
+      image:
+        "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=500&h=300&fit=crop",
+      price: "Contact for pricing",
+      instructor: "Dr Sunil Kumar & Faculty",
+      lessons: 35,
+      features: [
+        "Role-specific curriculum",
+        "Interdisciplinary teamwork focus",
+        "Practical application",
+        "Professional certification",
+      ],
+      whoShouldJoin:
+        "Nurses, physiotherapists, dietitians, occupational therapists, other allied health professionals",
+      aboutCourse:
+        "Specialised Lifestyle Medicine programme for allied health professionals to enhance scope and competency.",
+    },
+    {
+      id: 5,
+      title: "Faculty Development & Train-the-Trainer",
+      description:
+        "Develop faculty and trainers to deliver Lifestyle Medicine education in medical colleges and institutions.",
+      level: "Advanced",
+      duration: "Custom",
+      students: "150+",
+      rating: 5,
+      image:
+        "https://images.unsplash.com/photo-1576091160550-112173f7f869?w=500&h=300&fit=crop",
+      price: "Contact for pricing",
+      instructor: "Dr Sunil Kumar & Faculty",
+      lessons: 50,
+      features: [
+        "Trainer certification",
+        "Curriculum development guidance",
+        "Teaching methodology",
+        "Institutional integration support",
+        "Ongoing faculty support",
+      ],
+      whoShouldJoin:
+        "Medical college faculty, institutional leaders, curriculum developers",
+      aboutCourse:
+        "Comprehensive faculty development programme to build capacity for Lifestyle Medicine education delivery across institutions.",
+    },
+    {
+      id: 6,
+      title: "Burnout Prevention & Clinician Wellbeing",
+      description:
+        "Specialised programme addressing clinician burnout through evidence-based wellbeing strategies.",
+      level: "Professional",
+      duration: "8 weeks",
+      students: "200+",
+      rating: 4.95,
+      image:
+        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&h=300&fit=crop",
+      price: "Contact for pricing",
+      instructor: "Dr Sunil Kumar",
+      lessons: 32,
+      features: [
+        "Evidence-based burnout prevention",
+        "Clinician wellbeing strategies",
+        "Stress management techniques",
+        "Peer support frameworks",
+        "Institutional implementation guidance",
+      ],
+      whoShouldJoin: "Doctors, healthcare professionals, institutional leaders",
+      aboutCourse:
+        "Comprehensive programme addressing clinician burnout and promoting sustainable wellbeing in healthcare.",
+    },
+    {
+      id: 7,
+      title: "Public: Introduction to Lifestyle Medicine",
+      description:
+        "Free or low-cost public education about Lifestyle Medicine principles for everyone, not just clinicians.",
+      level: "Beginner",
+      duration: "4 weeks",
+      students: "1000+",
+      rating: 4.9,
+      image:
+        "https://images.unsplash.com/photo-1570129477492-45a003537e1f?w=500&h=300&fit=crop",
+      price: "Free/Minimal",
+      instructor: "Academy Team",
+      lessons: 20,
+      features: [
+        "Lifestyle Medicine basics",
+        "Practical health tips",
+        "Disease prevention education",
+        "Community-focused",
+        "Non-clinical educational content",
+      ],
+      whoShouldJoin: "General public interested in lifestyle medicine",
+      aboutCourse:
+        "Public education programme making Lifestyle Medicine knowledge accessible to everyone.",
     },
   ];
 

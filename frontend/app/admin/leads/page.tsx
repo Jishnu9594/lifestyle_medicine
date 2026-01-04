@@ -79,7 +79,9 @@ export default function AdminLeadsPage() {
       <main className="min-h-screen overflow-hidden bg-gradient-to-br from-primary-50 to-white">
         <Section spacing="lg">
           <Container>
-            <h1 className="heading-1 mb-2 gradient-text">Admin - Leads Dashboard</h1>
+            <h1 className="heading-1 mb-2 gradient-text">
+              Admin - Leads Dashboard
+            </h1>
             <p className="text-body text-muted mb-12">
               View and manage all leads from your website
             </p>
@@ -87,19 +89,27 @@ export default function AdminLeadsPage() {
             {/* Stats Grid */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
               <Card hover className="p-6 text-center">
-                <div className="text-4xl font-bold text-primary-500 mb-2">{stats.total}</div>
+                <div className="text-4xl font-bold text-primary-500 mb-2">
+                  {stats.total}
+                </div>
                 <div className="text-muted">Total Leads</div>
               </Card>
               <Card hover className="p-6 text-center">
-                <div className="text-4xl font-bold text-primary-500 mb-2">{stats.today}</div>
+                <div className="text-4xl font-bold text-primary-500 mb-2">
+                  {stats.today}
+                </div>
                 <div className="text-muted">Today</div>
               </Card>
               <Card hover className="p-6 text-center">
-                <div className="text-4xl font-bold text-primary-500 mb-2">{stats.contact}</div>
+                <div className="text-4xl font-bold text-primary-500 mb-2">
+                  {stats.contact}
+                </div>
                 <div className="text-muted">Contact Form</div>
               </Card>
               <Card hover className="p-6 text-center">
-                <div className="text-4xl font-bold text-primary-500 mb-2">{stats.course}</div>
+                <div className="text-4xl font-bold text-primary-500 mb-2">
+                  {stats.course}
+                </div>
                 <div className="text-muted">Course Enrollments</div>
               </Card>
             </div>
@@ -156,7 +166,9 @@ export default function AdminLeadsPage() {
                     hover
                     className="p-6 cursor-pointer transition-all"
                     onClick={() =>
-                      setSelectedLead(selectedLead?.id === lead.id ? null : lead)
+                      setSelectedLead(
+                        selectedLead?.id === lead.id ? null : lead
+                      )
                     }
                   >
                     <div className="flex items-start justify-between gap-4">
@@ -209,7 +221,9 @@ export default function AdminLeadsPage() {
                       <div className="mt-6 pt-6 border-t border-gray-200">
                         <h4 className="font-semibold mb-3">Message:</h4>
                         <div className="bg-gray-50 p-4 rounded-lg">
-                          <p className="text-muted whitespace-pre-wrap">{lead.message}</p>
+                          <p className="text-muted whitespace-pre-wrap">
+                            {lead.message}
+                          </p>
                         </div>
                         <div className="mt-4 flex gap-2">
                           <a
@@ -220,7 +234,10 @@ export default function AdminLeadsPage() {
                           </a>
                           {lead.phone && (
                             <a
-                              href={`https://wa.me/${lead.phone.replace(/[^\d]/g, "")}`}
+                              href={`https://wa.me/${lead.phone.replace(
+                                /[^\d]/g,
+                                ""
+                              )}`}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="flex-1 px-4 py-2 rounded-lg bg-green-500 text-white font-semibold hover:bg-green-600 transition-colors text-center"

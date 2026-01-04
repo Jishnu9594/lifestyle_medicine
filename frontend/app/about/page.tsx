@@ -10,36 +10,30 @@ import { AboutImage } from "@/components/AboutImage";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About | Lifestyle Medicine Academy",
+  title: "About | Lifestyle Medicine Academy India",
   description:
-    "Learn about our mission, values, and the experts behind Lifestyle Medicine Academy.",
+    "Learn about our mission, founders Dr Sunil Kumar and Dr Arun Das, and our clinician-led approach to advancing Lifestyle Medicine education and implementation.",
 };
 
 export default function AboutPage() {
   const experts = [
     {
-      name: "Dr. Sarah Johnson",
-      role: "Nutrition Specialist",
+      name: "Dr. Sunil Kumar",
+      role: "Founder & Director",
       image:
         "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop&q=80",
-      bio: "PhD in Nutritional Science with 20+ years of clinical experience",
-      credentials: "MD, Board Certified",
+      bio: "UK-based Lifestyle Medicine Physician, medical educator, and executive health coach with extensive international experience across the UK, Europe, the Middle East, and India.",
+      credentials: "MD, Lifestyle Medicine Physician",
+      details: "Widely recognised for work in Lifestyle Medicine education and certification, burnout prevention, clinician wellbeing, and faculty development. His vision: move Lifestyle Medicine from evidence to education, education to systems, and prevention into practice."
     },
     {
-      name: "Dr. Michael Chen",
-      role: "Fitness & Movement Expert",
+      name: "Dr. Arun Das",
+      role: "Co-Founder",
       image:
         "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&q=80",
-      bio: "Exercise physiologist and certified health coach",
-      credentials: "MS, NASM-CPT",
-    },
-    {
-      name: "Dr. Emma Davis",
-      role: "Sleep & Wellness Coach",
-      image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&q=80",
-      bio: "Behavioral sleep medicine specialist",
-      credentials: "PhD, Sleep Medicine",
+      bio: "Clinician leader and Lifestyle Medicine advocate with deep engagement in education, community health, and professional outreach in India.",
+      credentials: "MD, Health Leader",
+      details: "Contextualises Lifestyle Medicine for India, drives clinician engagement and capacity building, and develops partnerships. Brings global–local leadership model with Dr Sunil Kumar."
     },
   ];
 

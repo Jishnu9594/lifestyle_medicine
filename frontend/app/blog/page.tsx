@@ -35,7 +35,9 @@ export default function BlogPage() {
     fetchBlogs();
   }, []);
 
-  const categories = [...new Set(blogPosts.map((post) => post.category).filter(Boolean))];
+  const categories = [
+    ...new Set(blogPosts.map((post) => post.category).filter(Boolean)),
+  ];
 
   return (
     <>
@@ -139,7 +141,9 @@ export default function BlogPage() {
                             <div className="flex items-center justify-between text-sm text-muted mb-3">
                               <span>
                                 {post.created_at
-                                  ? new Date(post.created_at).toLocaleDateString()
+                                  ? new Date(
+                                      post.created_at
+                                    ).toLocaleDateString()
                                   : "Date N/A"}
                               </span>
                             </div>
@@ -154,7 +158,9 @@ export default function BlogPage() {
 
                             <div className="flex items-center justify-between pt-4 border-t border-gray-200">
                               <span className="text-sm font-semibold text-muted">
-                                {post.author ? `By ${post.author}` : "Author N/A"}
+                                {post.author
+                                  ? `By ${post.author}`
+                                  : "Author N/A"}
                               </span>
                               <span className="text-primary-500 font-semibold group-hover:translate-x-2 transition-transform">
                                 Read →

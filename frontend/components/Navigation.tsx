@@ -41,7 +41,7 @@ export function Navigation() {
               href="/courses"
               className="px-4 py-2 rounded-lg text-text font-medium hover:bg-primary-50 hover:text-primary-600 transition-all duration-300"
             >
-              Courses
+              Programs
             </Link>
             <Link
               href="/about"
@@ -54,6 +54,12 @@ export function Navigation() {
               className="px-4 py-2 rounded-lg text-text font-medium hover:bg-primary-50 hover:text-primary-600 transition-all duration-300"
             >
               Blog
+            </Link>
+            <Link
+              href="/faq"
+              className="px-4 py-2 rounded-lg text-text font-medium hover:bg-primary-50 hover:text-primary-600 transition-all duration-300"
+            >
+              FAQ
             </Link>
             <Link
               href="/contact"
@@ -106,7 +112,7 @@ export function Navigation() {
               href="/courses"
               className="block px-4 py-2 rounded-lg text-text font-medium hover:bg-primary-50 hover:text-primary-600 transition-colors"
             >
-              Courses
+              Programs
             </Link>
             <Link
               href="/about"
@@ -119,6 +125,12 @@ export function Navigation() {
               className="block px-4 py-2 rounded-lg text-text font-medium hover:bg-primary-50 hover:text-primary-600 transition-colors"
             >
               Blog
+            </Link>
+            <Link
+              href="/faq"
+              className="block px-4 py-2 rounded-lg text-text font-medium hover:bg-primary-50 hover:text-primary-600 transition-colors"
+            >
+              FAQ
             </Link>
             <Link
               href="/contact"

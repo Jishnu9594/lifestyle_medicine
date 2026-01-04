@@ -23,6 +23,7 @@ Course:   (optional - "Nutrition Mastery" if coming from course page)
 ### 2. **Form Submission** (Frontend → Backend)
 
 The contact form:
+
 - Validates input using Zod schema (`frontend/lib/validation.ts`)
 - Calls `leadAPI.submit(data)` which sends POST request to backend
 - If course enrollment, prepends course name to message
@@ -33,7 +34,7 @@ const submitData = {
   email: "john@example.com",
   phone: "+1-555-0123",
   message: "I'm interested in your courses",
-  source: "contact"
+  source: "contact",
 };
 
 // This calls: POST https://lifestyle-medicine.onrender.com/leads
@@ -202,6 +203,7 @@ The message auto-disappears after 5 seconds and form resets.
 **Endpoint**: `POST /leads`
 
 **Request**:
+
 ```bash
 curl -X POST https://lifestyle-medicine.onrender.com/leads \
   -H "Content-Type: application/json" \
@@ -215,6 +217,7 @@ curl -X POST https://lifestyle-medicine.onrender.com/leads \
 ```
 
 **Response** (201 Created):
+
 ```json
 {
   "id": 2,
@@ -232,11 +235,13 @@ curl -X POST https://lifestyle-medicine.onrender.com/leads \
 **Endpoint**: `GET /leads`
 
 **Request**:
+
 ```bash
 curl https://lifestyle-medicine.onrender.com/leads
 ```
 
 **Response**:
+
 ```json
 [
   {
@@ -261,10 +266,12 @@ curl https://lifestyle-medicine.onrender.com/leads
 ```
 
 **Query Parameters**:
+
 - `skip`: Number of records to skip (default: 0)
 - `limit`: Number of records to return (default: 50)
 
 **Example**: Get leads 10-20:
+
 ```bash
 curl "https://lifestyle-medicine.onrender.com/leads?skip=10&limit=10"
 ```
@@ -274,11 +281,13 @@ curl "https://lifestyle-medicine.onrender.com/leads?skip=10&limit=10"
 **Endpoint**: `GET /leads/{lead_id}`
 
 **Request**:
+
 ```bash
 curl https://lifestyle-medicine.onrender.com/leads/1
 ```
 
 **Response**:
+
 ```json
 {
   "id": 1,
@@ -297,19 +306,20 @@ curl https://lifestyle-medicine.onrender.com/leads/1
 
 The `source` field tracks where the lead came from:
 
-| Source | Description | Example |
-|--------|-------------|---------|
-| `contact` | Contact form on /contact page | User fills contact form |
-| `hero` | Hero section CTA button | "Get Started" button click |
-| `newsletter` | Newsletter signup | Email subscription |
-| `blog` | Blog post engagement | Reader interested in topic |
-| `course` | Course enrollment | Enrolling in specific course |
+| Source       | Description                   | Example                      |
+| ------------ | ----------------------------- | ---------------------------- |
+| `contact`    | Contact form on /contact page | User fills contact form      |
+| `hero`       | Hero section CTA button       | "Get Started" button click   |
+| `newsletter` | Newsletter signup             | Email subscription           |
+| `blog`       | Blog post engagement          | Reader interested in topic   |
+| `course`     | Course enrollment             | Enrolling in specific course |
 
 **Setting Source** (Currently defaults to "contact"):
+
 ```typescript
 const submitData = {
   ...data,
-  source: "contact"  // or "hero", "newsletter", "blog", "course"
+  source: "contact", // or "hero", "newsletter", "blog", "course"
 };
 ```
 
@@ -319,13 +329,13 @@ const submitData = {
 
 The contact form validates data before sending to backend:
 
-| Field | Type | Rules | Example |
-|-------|------|-------|---------|
-| `name` | String | 2-255 characters, required | "John Doe" |
-| `email` | Email | Valid email format, required | "john@example.com" |
-| `phone` | String | Optional, max 20 chars | "+1-555-0123" |
-| `message` | String | Optional, max 5000 chars | "I'm interested..." |
-| `source` | String | 1-50 chars, required | "contact" |
+| Field     | Type   | Rules                        | Example             |
+| --------- | ------ | ---------------------------- | ------------------- |
+| `name`    | String | 2-255 characters, required   | "John Doe"          |
+| `email`   | Email  | Valid email format, required | "john@example.com"  |
+| `phone`   | String | Optional, max 20 chars       | "+1-555-0123"       |
+| `message` | String | Optional, max 5000 chars     | "I'm interested..." |
+| `source`  | String | 1-50 chars, required         | "contact"           |
 
 **File**: `frontend/lib/validation.ts`
 
@@ -377,6 +387,7 @@ CREATE INDEX idx_leads_created_at ON leads(created_at);
 ### 2. **Test via API** (Command Line)
 
 **Create a lead**:
+
 ```bash
 curl -X POST https://lifestyle-medicine.onrender.com/leads \
   -H "Content-Type: application/json" \
@@ -390,6 +401,7 @@ curl -X POST https://lifestyle-medicine.onrender.com/leads \
 ```
 
 **Verify it was saved**:
+
 ```bash
 curl https://lifestyle-medicine.onrender.com/leads | jq '.[] | {id, name, email, created_at}'
 ```
@@ -397,6 +409,7 @@ curl https://lifestyle-medicine.onrender.com/leads | jq '.[] | {id, name, email,
 ### 3. **Monitor in Real-time**
 
 Check the logs on Render dashboard:
+
 1. Go to https://dashboard.render.com
 2. Click on "lifestyle-medicine-api" service
 3. Go to "Logs" tab
@@ -407,14 +420,18 @@ Check the logs on Render dashboard:
 ## Next Steps - Adding More Features
 
 ### 1. **Admin Dashboard**
+
 Create admin panel to view/manage leads:
+
 ```typescript
 // frontend/app/admin/leads/page.tsx
 const response = await leadAPI.getAll();
 ```
 
 ### 2. **Email Notifications**
+
 Send email when new lead is submitted:
+
 ```python
 # backend/app/routers/leads.py
 from app.email import send_lead_notification
@@ -422,21 +439,27 @@ await send_lead_notification(lead)
 ```
 
 ### 3. **Lead Scoring**
+
 Add scoring based on engagement:
+
 ```python
 # Score based on source, fields filled, etc.
 lead.score = calculate_score(lead)
 ```
 
 ### 4. **Export/CRM Integration**
+
 Export leads to external systems:
+
 - Salesforce
 - HubSpot
 - Mailchimp
 - Google Sheets
 
 ### 5. **SMS/Email Follow-up**
+
 Automated follow-up sequences:
+
 - Welcome email
 - Product info email
 - Course recommendation
@@ -449,6 +472,7 @@ Automated follow-up sequences:
 ### Issue: Form submission fails with "Invalid email"
 
 **Solution**: Check email format - must be valid email
+
 ```
 ❌ "john@"
 ❌ "john.example.com"
@@ -458,6 +482,7 @@ Automated follow-up sequences:
 ### Issue: Lead not appearing in database
 
 **Solution**: Check:
+
 1. Backend is running: `curl https://lifestyle-medicine.onrender.com/leads`
 2. Email validation passes
 3. No CORS errors in browser console
@@ -465,6 +490,7 @@ Automated follow-up sequences:
 ### Issue: CORS error when submitting form
 
 **Solution**: Backend CORS is already configured for:
+
 - `http://localhost:3000` (local dev)
 - `http://localhost:3001` (local dev)
 - Frontend production domain (once deployed)
@@ -486,6 +512,7 @@ Update `backend/app/main.py` if needed.
 7. ✅ Admin can retrieve via GET `/leads`
 
 **You can now**:
+
 - ✅ View all leads: `curl https://lifestyle-medicine.onrender.com/leads`
 - ✅ Get specific lead: `curl https://lifestyle-medicine.onrender.com/leads/1`
 - ✅ Submit from frontend form
