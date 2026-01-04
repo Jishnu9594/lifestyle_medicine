@@ -1,9 +1,10 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+
 from app.database import Base, engine
 from app.routers import blogs, leads
 
-# Create tables
+# Create database tables
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
@@ -12,25 +13,24 @@ app = FastAPI(
     version="0.1.0",
 )
 
-# Add CORS middleware
+# CORS configuration
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000",
         "http://localhost:8000",
-        "https://lifestylemedicine.vercel.app",
+        "https://lifestyle-medicine-tbui.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Include routers
+# Include API routers
 app.include_router(blogs.router)
 app.include_router(leads.router)
 
-
-@app.get("/")
+@app.get("/", tags=["Root"])
 def read_root():
     return {
         "message": "Welcome to Lifestyle Medicine API",
@@ -38,7 +38,6 @@ def read_root():
         "version": "0.1.0",
     }
 
-
-@app.get("/health")
+@app.get("/health", tags=["Health"])
 def health_check():
     return {"status": "healthy"}
