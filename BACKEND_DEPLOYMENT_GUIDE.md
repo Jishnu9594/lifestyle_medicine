@@ -14,8 +14,8 @@
   1. Sign up at render.com with GitHub account
   2. Create new "Web Service"
   3. Connect your GitHub repo (lifestyle_medicine)
-  4. Set build command: `pip install -r requirements.txt`
-  5. Set start command: `uvicorn app.main:app --host 0.0.0.0 --port 8000`
+  4. Set build command: `pip install -r backend/requirements.txt`
+  5. Set start command: `cd backend && uvicorn app.main:app --host 0.0.0.0 --port 8000`
   6. Deploy!
 
 ### 2. **Railway** (Free Tier Available)
