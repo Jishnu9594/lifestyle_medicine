@@ -15,18 +15,15 @@ export function Navigation() {
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center space-x-3 hover:opacity-80 transition-opacity"
+            className="flex items-center hover:opacity-80 transition-opacity"
           >
             <Image
               src="/lifestlelogo.png"
-              alt="LifeStyle Medicine Logo"
-              width={60}
-              height={60}
-              className="h-14 w-14 sm:h-16 sm:w-16 object-contain"
+              alt="LifeStyle Medicine Academy India"
+              width={80}
+              height={80}
+              className="h-20 w-20 sm:h-24 sm:w-24 object-contain"
             />
-            <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent hover:from-primary-700 hover:to-primary-600 transition-all">
-              LifeStyle Medicine
-            </span>
           </Link>
 
           {/* Desktop Menu */}

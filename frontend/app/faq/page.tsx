@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+"use client";
+
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Container } from "@/components/Container";
@@ -9,16 +10,17 @@ import { FadeIn } from "@/components/FadeIn";
 import Link from "next/link";
 import { useState } from "react";
 
-export const metadata: Metadata = {
-  title: "FAQ | Lifestyle Medicine Academy India",
-  description:
-    "Frequently asked questions about IBLM certification, courses, clinical services, and Lifestyle Medicine Academy India programmes.",
-};
-
 export default function FAQPage() {
   const faqs = [
     {
       category: "Certification & IBLM",
+      icon: "🎓",
+      iconSvg: (
+        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C6.5 6.253 2 10.998 2 17s4.5 10.747 10 10.747m0-13c5.5 0 10 4.745 10 10.747" />
+        </svg>
+      ),
+      color: "from-blue-400 to-blue-600",
       questions: [
         {
           q: "Do you offer the IBLM Certification?",
@@ -40,6 +42,13 @@ export default function FAQPage() {
     },
     {
       category: "Courses & Programmes",
+      icon: "📚",
+      iconSvg: (
+        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C6.5 6.253 2 10.998 2 17s4.5 10.747 10 10.747m0-13c5.5 0 10 4.745 10 10.747" />
+        </svg>
+      ),
+      color: "from-green-400 to-green-600",
       questions: [
         {
           q: "Are all courses paid?",
@@ -61,6 +70,13 @@ export default function FAQPage() {
     },
     {
       category: "Services & Clinical",
+      icon: "🏥",
+      iconSvg: (
+        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z" />
+        </svg>
+      ),
+      color: "from-red-400 to-red-600",
       questions: [
         {
           q: "Do you provide clinical treatment?",
@@ -82,6 +98,13 @@ export default function FAQPage() {
     },
     {
       category: "Programme Details",
+      icon: "⏱️",
+      iconSvg: (
+        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
+      color: "from-orange-400 to-orange-600",
       questions: [
         {
           q: "How long are the programmes?",
@@ -103,6 +126,13 @@ export default function FAQPage() {
     },
     {
       category: "Affiliations & Governance",
+      icon: "🌍",
+      iconSvg: (
+        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20H19a2 2 0 002-2v-2a2 2 0 00-2-2h-2.064M9 20H5a2 2 0 01-2-2v-2a2 2 0 012-2h2.064" />
+        </svg>
+      ),
+      color: "from-purple-400 to-purple-600",
       questions: [
         {
           q: "What are your affiliations?",
@@ -155,9 +185,14 @@ export default function FAQPage() {
             {faqs.map((section, sectionIndex) => (
               <FadeIn key={section.category} delay={0.2 + sectionIndex * 0.1}>
                 <div className="mb-16">
-                  <h2 className="heading-2 mb-8 text-primary-600">
-                    {section.category}
-                  </h2>
+                  <div className="flex items-center gap-4 mb-8">
+                    <div className={`flex-shrink-0 w-16 h-16 bg-gradient-to-br ${section.color} rounded-xl flex items-center justify-center shadow-lg`}>
+                      {section.iconSvg}
+                    </div>
+                    <div>
+                      <h2 className="heading-2">{section.category}</h2>
+                    </div>
+                  </div>
 
                   <div className="space-y-4">
                     {section.questions.map((item, qIndex) => (
@@ -219,21 +254,23 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
       onClick={() => setIsOpen(!isOpen)}
     >
       <div className="p-6">
-        <div className="flex items-start justify-between">
-          <h3 className="heading-4 text-left flex-1">{question}</h3>
-          <span
-            className={`text-2xl ml-4 transition-transform duration-300 flex-shrink-0 ${
-              isOpen ? "rotate-45" : ""
-            }`}
-          >
+        <div className="flex items-start justify-between gap-4">
+          <div className="flex-1">
+            <h3 className="heading-4 text-left">{question}</h3>
+          </div>
+          <div className={`text-3xl font-bold text-primary-600 flex-shrink-0 transition-transform duration-300 ${
+            isOpen ? "rotate-45" : ""
+          }`}>
             +
-          </span>
+          </div>
         </div>
 
         {isOpen && (
-          <p className="text-body mt-4 pt-4 border-t border-primary-100">
-            {answer}
-          </p>
+          <div className="mt-6 pt-6 border-t-2 border-primary-100 animate-slideDown">
+            <p className="text-body leading-relaxed">
+              {answer}
+            </p>
+          </div>
         )}
       </div>
     </Card>
