@@ -17,12 +17,25 @@ export default async function handler(
         body: new URLSearchParams({ username, password }),
       }
     );
-    const data = await apiRes.json();
+    let data;
+    try {
+      data = await apiRes.json();
+    } catch (jsonErr) {
+      data = { detail: "Invalid JSON response from backend", raw: await apiRes.text() };
+    }
     if (!apiRes.ok) {
+      // Log error details for debugging
+      console.error("Admin login failed:", {
+        status: apiRes.status,
+        data,
+        username,
+      });
       return res.status(apiRes.status).json(data);
     }
     return res.status(200).json(data);
-  } catch (err) {
-    return res.status(500).json({ detail: "Internal server error" });
+  } catch (err: any) {
+    // Log unexpected errors
+    console.error("Admin login unexpected error:", err);
+    return res.status(500).json({ detail: "Internal server error", error: err?.message || err });
   }
 }
