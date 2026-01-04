@@ -99,7 +99,9 @@ export default function Home() {
     },
   ];
 
-  const EnquiryPopup = dynamic(() => import("@/components/EnquiryPopup"), { ssr: false });
+  const EnquiryPopup = dynamic(() => import("@/components/EnquiryPopup"), {
+    ssr: false,
+  });
   return (
     <>
       <Navigation />
