@@ -21,7 +21,10 @@ export default async function handler(
     try {
       data = await apiRes.json();
     } catch (jsonErr) {
-      data = { detail: "Invalid JSON response from backend", raw: await apiRes.text() };
+      data = {
+        detail: "Invalid JSON response from backend",
+        raw: await apiRes.text(),
+      };
     }
     if (!apiRes.ok) {
       // Log error details for debugging
@@ -36,6 +39,8 @@ export default async function handler(
   } catch (err: any) {
     // Log unexpected errors
     console.error("Admin login unexpected error:", err);
-    return res.status(500).json({ detail: "Internal server error", error: err?.message || err });
+    return res
+      .status(500)
+      .json({ detail: "Internal server error", error: err?.message || err });
   }
 }
