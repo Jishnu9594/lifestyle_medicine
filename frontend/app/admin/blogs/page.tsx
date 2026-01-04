@@ -35,6 +35,13 @@ export default function AdminBlogsPage() {
     useForm<BlogFormData>({
       resolver: zodResolver(blogSchema),
       defaultValues: {
+        title: "",
+        slug: "",
+        excerpt: "",
+        content: "",
+        image_url: "",
+        author: "",
+        category: "",
         published: false,
       },
     });
