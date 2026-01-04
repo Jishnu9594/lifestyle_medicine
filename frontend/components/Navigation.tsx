@@ -8,78 +8,83 @@ import Image from "next/image";
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/courses", label: "Programs" },
+    { href: "/about", label: "About" },
+    { href: "/blog", label: "Blog" },
+    { href: "/contact", label: "Contact" },
+  ];
+
   return (
-    <nav className="bg-white/95 backdrop-blur-md border-b border-gray-200/50 shadow-sm sticky top-0 z-50 transition-all duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 sm:h-20">
-          {/* Logo */}
+    <nav className="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-2xl border-b border-gray-100/50 shadow-lg">
+      <div className="w-full px-3 sm:px-4 md:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-14 sm:h-16 md:h-20 py-2">
+          {/* Logo - Left Corner */}
           <Link
             href="/"
-            className="flex items-center hover:opacity-80 transition-opacity"
+            className="flex items-center hover:opacity-80 transition-opacity duration-300 flex-shrink-0"
           >
             <Image
-              src="/lifestlelogo.png"
+              src="/Screenshot_from_2026-01-04_17-24-56-removebg-preview.png"
               alt="LifeStyle Medicine Academy India"
-              width={80}
-              height={80}
-              className="h-20 w-20 sm:h-24 sm:w-24 object-contain"
+              width={1000}
+              height={100}
+              className="h-12 w-12 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 object-contain"
+              priority
             />
           </Link>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-1">
-            <Link
-              href="/"
-              className="px-4 py-2 rounded-lg text-text font-medium hover:bg-primary-50 hover:text-primary-600 transition-all duration-300"
-            >
-              Home
-            </Link>
-            <Link
-              href="/courses"
-              className="px-4 py-2 rounded-lg text-text font-medium hover:bg-primary-50 hover:text-primary-600 transition-all duration-300"
-            >
-              Programs
-            </Link>
-            <Link
-              href="/about"
-              className="px-4 py-2 rounded-lg text-text font-medium hover:bg-primary-50 hover:text-primary-600 transition-all duration-300"
-            >
-              About
-            </Link>
-            <Link
-              href="/blog"
-              className="px-4 py-2 rounded-lg text-text font-medium hover:bg-primary-50 hover:text-primary-600 transition-all duration-300"
-            >
-              Blog
-            </Link>
-            <Link
-              href="/faq"
-              className="px-4 py-2 rounded-lg text-text font-medium hover:bg-primary-50 hover:text-primary-600 transition-all duration-300"
-            >
-              FAQ
-            </Link>
-            <Link
-              href="/contact"
-              className="px-4 py-2 rounded-lg text-text font-medium hover:bg-primary-50 hover:text-primary-600 transition-all duration-300"
-            >
-              Contact
-            </Link>
+          {/* Desktop Navigation + CTA - Right Corner */}
+          <div className="hidden lg:flex items-center gap-1">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50/80 rounded-lg transition-all duration-300 whitespace-nowrap"
+              >
+                {link.label}
+              </Link>
+            ))}
+            <div className="ml-2 pl-2 border-l border-gray-200">
+              <Button variant="primary" size="sm">
+                <Link href="/contact" className="whitespace-nowrap">
+                  Get Started
+                </Link>
+              </Button>
+            </div>
           </div>
 
-          {/* Desktop CTA Button */}
-          <div className="hidden md:block">
-            <Button variant="primary" size="sm">
-              <Link href="/contact">Get Started</Link>
-            </Button>
+          {/* Tablet Navigation + CTA - Right Corner */}
+          <div className="hidden md:flex lg:hidden items-center gap-1">
+            {navLinks.slice(0, 3).map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="px-2 py-1.5 text-xs font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50/80 rounded-md transition-all duration-300 whitespace-nowrap"
+              >
+                {link.label}
+              </Link>
+            ))}
+            <div className="ml-1 pl-1 border-l border-gray-200">
+              <Link
+                href="/contact"
+                className="px-3 py-1.5 text-xs font-medium text-white bg-primary-600 hover:bg-primary-700 rounded-lg transition-all duration-300 whitespace-nowrap"
+              >
+                Contact
+              </Link>
+            </div>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button - Right Corner */}
           <button
-            className="md:hidden p-2 rounded-lg hover:bg-primary-50 transition-colors"
+            className="md:hidden p-2 rounded-lg hover:bg-primary-50 transition-colors duration-300 flex-shrink-0"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+            aria-expanded={isOpen}
           >
             <svg
-              className={`w-6 h-6 transition-transform duration-300 ${
+              className={`w-5 h-5 sm:w-6 sm:h-6 text-gray-700 transition-transform duration-300 ${
                 isOpen ? "rotate-90" : ""
               }`}
               fill="none"
@@ -98,41 +103,25 @@ export function Navigation() {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden pb-4 space-y-2 animate-slideInDown">
-            <Link
-              href="/"
-              className="block px-4 py-2 rounded-lg text-text font-medium hover:bg-primary-50 hover:text-primary-600 transition-colors"
-            >
-              Home
-            </Link>
-            <Link
-              href="/courses"
-              className="block px-4 py-2 rounded-lg text-text font-medium hover:bg-primary-50 hover:text-primary-600 transition-colors"
-            >
-              Programs
-            </Link>
-            <Link
-              href="/about"
-              className="block px-4 py-2 rounded-lg text-text font-medium hover:bg-primary-50 hover:text-primary-600 transition-colors"
-            >
-              About
-            </Link>
-            <Link
-              href="/blog"
-              className="block px-4 py-2 rounded-lg text-text font-medium hover:bg-primary-50 hover:text-primary-600 transition-colors"
-            >
-              Blog
-            </Link>
-            <Link
-              href="/contact"
-              className="block px-4 py-2 rounded-lg text-text font-medium hover:bg-primary-50 hover:text-primary-600 transition-colors"
-            >
-              Contact
-            </Link>
-            <div className="pt-2">
-              <Button variant="primary" size="sm" className="w-full">
-                <Link href="/contact">Get Started</Link>
-              </Button>
+          <div className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-100 shadow-2xl animate-slideDown">
+            <div className="px-3 sm:px-4 py-3 sm:py-4 space-y-1">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="block px-3 py-2.5 text-sm font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50/80 rounded-lg transition-all duration-300"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <div className="pt-3 mt-2 border-t border-gray-100">
+                <Button variant="primary" size="sm" className="w-full">
+                  <Link href="/contact" className="whitespace-nowrap">
+                    Get Started
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
         )}

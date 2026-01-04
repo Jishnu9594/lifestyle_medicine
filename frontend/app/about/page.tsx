@@ -138,7 +138,7 @@ export default function AboutPage() {
   return (
     <>
       <Navigation />
-      <main className="min-h-screen overflow-hidden">
+      <main className="min-h-screen overflow-hidden pt-14 sm:pt-16 md:pt-20">
         {/* Hero Section */}
         <Section
           spacing="lg"

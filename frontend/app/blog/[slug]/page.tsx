@@ -21,7 +21,7 @@ export default function BlogDetailPage({ params }: PageProps) {
   return (
     <>
       <Navigation />
-      <main>
+      <main className="pt-14 sm:pt-16 md:pt-20">
         <Section spacing="lg">
           <Container size="md">
             <article>

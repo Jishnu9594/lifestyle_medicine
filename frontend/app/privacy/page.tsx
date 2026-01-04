@@ -13,7 +13,7 @@ export default function PrivacyPage() {
   return (
     <>
       <Navigation />
-      <main>
+      <main className="pt-14 sm:pt-16 md:pt-20">
         <Section spacing="lg">
           <Container size="md">
             <h1 className="heading-1 mb-8">Privacy Policy</h1>
