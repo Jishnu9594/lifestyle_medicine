@@ -24,9 +24,11 @@ function ContactFormContent() {
   });
 
   useEffect(() => {
-    const courseParam = searchParams.get("course");
-    if (courseParam) {
-      setCourseEnrolling(decodeURIComponent(courseParam));
+    if (searchParams) {
+      const courseParam = searchParams.get("course");
+      if (courseParam) {
+        setCourseEnrolling(decodeURIComponent(courseParam));
+      }
     }
   }, [searchParams]);
 

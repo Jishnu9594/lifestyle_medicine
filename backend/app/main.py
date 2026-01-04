@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.database import Base, engine
 from app.routers import blogs, leads
+from app.routers import auth
 
 # Create database tables
 Base.metadata.create_all(bind=engine)
@@ -29,6 +30,7 @@ app.add_middleware(
 # Include API routers
 app.include_router(blogs.router)
 app.include_router(leads.router)
+app.include_router(auth.router)
 
 @app.get("/", tags=["Root"])
 def read_root():

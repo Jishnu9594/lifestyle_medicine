@@ -3,6 +3,20 @@ from datetime import datetime
 from typing import Optional
 
 
+class AdminUserBase(BaseModel):
+    username: str
+
+class AdminUserCreate(AdminUserBase):
+    password: str
+
+class AdminUserResponse(AdminUserBase):
+    id: int
+    is_active: bool
+
+    class Config:
+        from_attributes = True
+
+
 class BlogBase(BaseModel):
     title: str = Field(..., min_length=1, max_length=255)
     slug: str = Field(..., min_length=1, max_length=255)

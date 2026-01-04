@@ -26,7 +26,17 @@ const blogSchema = z.object({
 
 type BlogFormData = z.infer<typeof blogSchema>;
 
+import { useRouter } from "next/navigation";
+import { useAdminSession } from "@/lib/adminSession";
+
 export default function AdminBlogsPage() {
+  const { token, loading: sessionLoading } = useAdminSession();
+  const router = useRouter();
+  // Redirect to login if not authenticated
+  if (!sessionLoading && !token) {
+    if (typeof window !== "undefined") router.push("/admin/login");
+    return null;
+  }
   const [blogs, setBlogs] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [editingId, setEditingId] = useState<number | null>(null);

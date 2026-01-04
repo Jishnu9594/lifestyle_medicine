@@ -32,15 +32,17 @@ def submit_lead(lead: LeadCreate, db: Session = Depends(get_db)):
     return created_lead
 
 
+from app.routers.auth import get_current_admin_user
+
 @router.get("", response_model=list[LeadResponse])
-def list_leads(skip: int = 0, limit: int = 50, db: Session = Depends(get_db)):
+def list_leads(skip: int = 0, limit: int = 50, db: Session = Depends(get_db), current_user=Depends(get_current_admin_user)):
     """List all leads (protected endpoint in production)"""
     leads = get_leads(db, skip=skip, limit=limit)
     return leads
 
 
 @router.get("/{lead_id}", response_model=LeadResponse)
-def get_lead_detail(lead_id: int, db: Session = Depends(get_db)):
+def get_lead_detail(lead_id: int, db: Session = Depends(get_db), current_user=Depends(get_current_admin_user)):
     """Get a specific lead"""
     lead = get_lead(db, lead_id)
     if not lead:

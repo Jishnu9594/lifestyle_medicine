@@ -1,4 +1,5 @@
 from fastapi import APIRouter, Depends, HTTPException
+from app.routers.auth import get_current_admin_user
 from sqlalchemy.orm import Session
 from app.database import get_db
 from app.models import Blog
@@ -32,7 +33,7 @@ def get_blog_detail(slug: str, db: Session = Depends(get_db)):
 
 
 @router.post("", response_model=BlogResponse)
-def create_new_blog(blog: BlogCreate, db: Session = Depends(get_db)):
+def create_new_blog(blog: BlogCreate, db: Session = Depends(get_db), current_user=Depends(get_current_admin_user)):
     """Create a new blog post (publish directly)"""
     # Check if slug already exists
     existing = db.query(Blog).filter_by(slug=blog.slug).first()
@@ -43,7 +44,7 @@ def create_new_blog(blog: BlogCreate, db: Session = Depends(get_db)):
 
 
 @router.put("/{blog_id}", response_model=BlogResponse)
-def update_blog_post(blog_id: int, blog: BlogUpdate, db: Session = Depends(get_db)):
+def update_blog_post(blog_id: int, blog: BlogUpdate, db: Session = Depends(get_db), current_user=Depends(get_current_admin_user)):
     """Update a blog post"""
     existing_blog = get_blog(db, blog_id)
     if not existing_blog:
@@ -53,7 +54,7 @@ def update_blog_post(blog_id: int, blog: BlogUpdate, db: Session = Depends(get_d
 
 
 @router.delete("/{blog_id}")
-def delete_blog_post(blog_id: int, db: Session = Depends(get_db)):
+def delete_blog_post(blog_id: int, db: Session = Depends(get_db), current_user=Depends(get_current_admin_user)):
     """Delete a blog post"""
     existing_blog = get_blog(db, blog_id)
     if not existing_blog:

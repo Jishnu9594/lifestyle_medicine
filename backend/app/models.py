@@ -3,6 +3,20 @@ from datetime import datetime
 from app.database import Base
 
 
+from passlib.hash import bcrypt
+
+
+class AdminUser(Base):
+    __tablename__ = "admin_users"
+
+    id = Column(Integer, primary_key=True, index=True)
+    username = Column(String(100), unique=True, index=True, nullable=False)
+    hashed_password = Column(String(255), nullable=False)
+    is_active = Column(Boolean, default=True)
+
+    def verify_password(self, password: str) -> bool:
+        return bcrypt.verify(password, self.hashed_password)
+
 class Blog(Base):
     __tablename__ = "blogs"
 

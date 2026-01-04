@@ -6,8 +6,17 @@ import { Container } from "@/components/Container";
 import { Section } from "@/components/Section";
 import { Card } from "@/components/Card";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useAdminSession } from "@/lib/adminSession";
 
 export default function AdminDashboard() {
+  const { token, loading: sessionLoading } = useAdminSession();
+  const router = useRouter();
+  if (!sessionLoading && !token) {
+    if (typeof window !== "undefined") router.push("/admin/login");
+    return null;
+  }
+
   return (
     <>
       <Navigation />

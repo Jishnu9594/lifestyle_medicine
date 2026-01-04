@@ -8,7 +8,17 @@ import { Section } from "@/components/Section";
 import { Card } from "@/components/Card";
 import { leadAPI } from "@/lib/api";
 
+import { useRouter } from "next/navigation";
+import { useAdminSession } from "@/lib/adminSession";
+
 export default function AdminLeadsPage() {
+  const { token, loading: sessionLoading } = useAdminSession();
+  const router = useRouter();
+  // Redirect to login if not authenticated
+  if (!sessionLoading && !token) {
+    if (typeof window !== "undefined") router.push("/admin/login");
+    return null;
+  }
   const [leads, setLeads] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedLead, setSelectedLead] = useState<any | null>(null);
