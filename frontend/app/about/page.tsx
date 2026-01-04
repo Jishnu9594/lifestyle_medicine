@@ -24,7 +24,8 @@ export default function AboutPage() {
         "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop&q=80",
       bio: "UK-based Lifestyle Medicine Physician, medical educator, and executive health coach with extensive international experience across the UK, Europe, the Middle East, and India.",
       credentials: "MD, Lifestyle Medicine Physician",
-      details: "Widely recognised for work in Lifestyle Medicine education and certification, burnout prevention, clinician wellbeing, and faculty development. His vision: move Lifestyle Medicine from evidence to education, education to systems, and prevention into practice."
+      details:
+        "Widely recognised for work in Lifestyle Medicine education and certification, burnout prevention, clinician wellbeing, and faculty development. His vision: move Lifestyle Medicine from evidence to education, education to systems, and prevention into practice.",
     },
     {
       name: "Dr. Arun Das",
@@ -33,7 +34,8 @@ export default function AboutPage() {
         "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&q=80",
       bio: "Clinician leader and Lifestyle Medicine advocate with deep engagement in education, community health, and professional outreach in India.",
       credentials: "MD, Health Leader",
-      details: "Contextualises Lifestyle Medicine for India, drives clinician engagement and capacity building, and develops partnerships. Brings global–local leadership model with Dr Sunil Kumar."
+      details:
+        "Contextualises Lifestyle Medicine for India, drives clinician engagement and capacity building, and develops partnerships. Brings global–local leadership model with Dr Sunil Kumar.",
     },
   ];
 

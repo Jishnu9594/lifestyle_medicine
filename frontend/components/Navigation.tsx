@@ -124,12 +124,6 @@ export function Navigation() {
               Blog
             </Link>
             <Link
-              href="/faq"
-              className="block px-4 py-2 rounded-lg text-text font-medium hover:bg-primary-50 hover:text-primary-600 transition-colors"
-            >
-              FAQ
-            </Link>
-            <Link
               href="/contact"
               className="block px-4 py-2 rounded-lg text-text font-medium hover:bg-primary-50 hover:text-primary-600 transition-colors"
             >

@@ -16,8 +16,18 @@ export default function FAQPage() {
       category: "Certification & IBLM",
       icon: "🎓",
       iconSvg: (
-        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C6.5 6.253 2 10.998 2 17s4.5 10.747 10 10.747m0-13c5.5 0 10 4.745 10 10.747" />
+        <svg
+          className="w-8 h-8 text-white"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M12 6.253v13m0-13C6.5 6.253 2 10.998 2 17s4.5 10.747 10 10.747m0-13c5.5 0 10 4.745 10 10.747"
+          />
         </svg>
       ),
       color: "from-blue-400 to-blue-600",
@@ -44,8 +54,18 @@ export default function FAQPage() {
       category: "Courses & Programmes",
       icon: "📚",
       iconSvg: (
-        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C6.5 6.253 2 10.998 2 17s4.5 10.747 10 10.747m0-13c5.5 0 10 4.745 10 10.747" />
+        <svg
+          className="w-8 h-8 text-white"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M12 6.253v13m0-13C6.5 6.253 2 10.998 2 17s4.5 10.747 10 10.747m0-13c5.5 0 10 4.745 10 10.747"
+          />
         </svg>
       ),
       color: "from-green-400 to-green-600",
@@ -72,8 +92,18 @@ export default function FAQPage() {
       category: "Services & Clinical",
       icon: "🏥",
       iconSvg: (
-        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z" />
+        <svg
+          className="w-8 h-8 text-white"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"
+          />
         </svg>
       ),
       color: "from-red-400 to-red-600",
@@ -100,8 +130,18 @@ export default function FAQPage() {
       category: "Programme Details",
       icon: "⏱️",
       iconSvg: (
-        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <svg
+          className="w-8 h-8 text-white"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
         </svg>
       ),
       color: "from-orange-400 to-orange-600",
@@ -128,8 +168,18 @@ export default function FAQPage() {
       category: "Affiliations & Governance",
       icon: "🌍",
       iconSvg: (
-        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20H19a2 2 0 002-2v-2a2 2 0 00-2-2h-2.064M9 20H5a2 2 0 01-2-2v-2a2 2 0 012-2h2.064" />
+        <svg
+          className="w-8 h-8 text-white"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20H19a2 2 0 002-2v-2a2 2 0 00-2-2h-2.064M9 20H5a2 2 0 01-2-2v-2a2 2 0 012-2h2.064"
+          />
         </svg>
       ),
       color: "from-purple-400 to-purple-600",
@@ -169,10 +219,12 @@ export default function FAQPage() {
             <FadeIn delay={0.1}>
               <div className="text-center py-12 sm:py-24 relative z-10">
                 <h1 className="heading-1 mb-6">
-                  <span className="gradient-text">Frequently Asked</span> Questions
+                  <span className="gradient-text">Frequently Asked</span>{" "}
+                  Questions
                 </h1>
                 <p className="text-body mx-auto max-w-2xl text-lg">
-                  Find answers to common questions about IBLM certification, our programmes, services, and Lifestyle Medicine Academy India.
+                  Find answers to common questions about IBLM certification, our
+                  programmes, services, and Lifestyle Medicine Academy India.
                 </p>
               </div>
             </FadeIn>
@@ -186,7 +238,9 @@ export default function FAQPage() {
               <FadeIn key={section.category} delay={0.2 + sectionIndex * 0.1}>
                 <div className="mb-16">
                   <div className="flex items-center gap-4 mb-8">
-                    <div className={`flex-shrink-0 w-16 h-16 bg-gradient-to-br ${section.color} rounded-xl flex items-center justify-center shadow-lg`}>
+                    <div
+                      className={`flex-shrink-0 w-16 h-16 bg-gradient-to-br ${section.color} rounded-xl flex items-center justify-center shadow-lg`}
+                    >
                       {section.iconSvg}
                     </div>
                     <div>
@@ -220,7 +274,8 @@ export default function FAQPage() {
                   Still have questions?
                 </h2>
                 <p className="text-primary-100 max-w-2xl mx-auto mb-8 text-lg">
-                  Reach out to our team. We're here to help you find the right programme for your goals.
+                  Reach out to our team. We're here to help you find the right
+                  programme for your goals.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link href="/contact">
@@ -258,18 +313,18 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
           <div className="flex-1">
             <h3 className="heading-4 text-left">{question}</h3>
           </div>
-          <div className={`text-3xl font-bold text-primary-600 flex-shrink-0 transition-transform duration-300 ${
-            isOpen ? "rotate-45" : ""
-          }`}>
+          <div
+            className={`text-3xl font-bold text-primary-600 flex-shrink-0 transition-transform duration-300 ${
+              isOpen ? "rotate-45" : ""
+            }`}
+          >
             +
           </div>
         </div>
 
         {isOpen && (
           <div className="mt-6 pt-6 border-t-2 border-primary-100 animate-slideDown">
-            <p className="text-body leading-relaxed">
-              {answer}
-            </p>
+            <p className="text-body leading-relaxed">{answer}</p>
           </div>
         )}
       </div>

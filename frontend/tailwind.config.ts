@@ -23,7 +23,8 @@ const config: Config = {
         muted: "#6B7280",
       },
       fontFamily: {
-        sans: ["system-ui", "sans-serif"],
+        sans: ['"Inter"', '"Segoe UI"', '"Roboto"', 'sans-serif'],
+        serif: ['"Lora"', 'serif'],
       },
     },
   },

@@ -58,7 +58,10 @@ export function Footer() {
               </h3>
             </div>
             <p className="text-gray-300 leading-relaxed">
-              Lifestyle Medicine Academy India is a clinician-led education and professional services organisation advancing Lifestyle Medicine education, certification, and implementation across healthcare, education, and communities.
+              Lifestyle Medicine Academy India is a clinician-led education and
+              professional services organisation advancing Lifestyle Medicine
+              education, certification, and implementation across healthcare,
+              education, and communities.
             </p>
             <div className="flex gap-4 mt-6">
               <a
@@ -124,12 +127,6 @@ export function Footer() {
                 className="block text-gray-300 hover:text-white hover:translate-x-1 transition-all"
               >
                 About Us
-              </Link>
-              <Link
-                href="/faq"
-                className="block text-gray-300 hover:text-white hover:translate-x-1 transition-all"
-              >
-                FAQ
               </Link>
               <Link
                 href="/blog"

@@ -12,7 +12,8 @@ import { ModernFeatureCard } from "@/components/ModernFeatureCard";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Lifestyle Medicine Academy India | Education. Consultation. Transformation.",
+  title:
+    "Lifestyle Medicine Academy India | Education. Consultation. Transformation.",
   description:
     "A clinician-led institution advancing Lifestyle Medicine education, certification, and implementation across healthcare, education, and communities. International IBLM certification, professional consultation, and turnkey solutions.",
   openGraph: {
@@ -131,10 +132,17 @@ export default function Home() {
                     For Professionals. For Institutions. For Communities.
                   </p>
                   <p className="text-body mx-0 mb-8">
-                    Lifestyle Medicine Academy India is a clinician-led education and professional services organisation delivering internationally recognised Lifestyle Medicine education and certification, workforce training, and turnkey implementation support.
+                    Lifestyle Medicine Academy India is a clinician-led
+                    education and professional services organisation delivering
+                    internationally recognised Lifestyle Medicine education and
+                    certification, workforce training, and turnkey
+                    implementation support.
                   </p>
                   <p className="text-body mx-0 mb-8">
-                    We work with healthcare professionals, hospitals, educational institutions, organisations, and communities to embed evidence-based Lifestyle Medicine into real-world practice.
+                    We work with healthcare professionals, hospitals,
+                    educational institutions, organisations, and communities to
+                    embed evidence-based Lifestyle Medicine into real-world
+                    practice.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Button variant="primary" size="lg">
@@ -195,7 +203,9 @@ export default function Home() {
               <div className="text-center mb-16">
                 <h2 className="heading-2 mb-4">What We Offer</h2>
                 <p className="text-body mx-auto max-w-3xl">
-                  Comprehensive Lifestyle Medicine education, certification, consultation services, and institutional partnerships delivered by clinician leaders.
+                  Comprehensive Lifestyle Medicine education, certification,
+                  consultation services, and institutional partnerships
+                  delivered by clinician leaders.
                 </p>
               </div>
             </FadeIn>
@@ -206,13 +216,27 @@ export default function Home() {
               <FadeIn delay={0.3}>
                 <Card hover className="p-8 h-full flex flex-col">
                   <div className="w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                    <svg
+                      className="w-8 h-8 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                      />
                     </svg>
                   </div>
-                  <h3 className="heading-3 mb-3">International Certification</h3>
+                  <h3 className="heading-3 mb-3">
+                    International Certification
+                  </h3>
                   <p className="text-body mb-6 flex-grow">
-                    Diploma in Lifestyle Medicine (IBLM) - the official International Board of Lifestyle Medicine certification issued by USA.
+                    Diploma in Lifestyle Medicine (IBLM) - the official
+                    International Board of Lifestyle Medicine certification
+                    issued by USA.
                   </p>
                   <ul className="space-y-2 text-sm text-body">
                     <li className="flex items-start">
@@ -235,13 +259,24 @@ export default function Home() {
               <FadeIn delay={0.35}>
                 <Card hover className="p-8 h-full flex flex-col">
                   <div className="w-14 h-14 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C6.5 6.253 2 10.998 2 17s4.5 10.747 10 10.747m0-13c5.5 0 10 4.745 10 10.747M12 6.253v13m0-13C6.5 6.253 2 10.998 2 17s4.5 10.747 10 10.747m0-13c5.5 0 10 4.745 10 10.747" />
+                    <svg
+                      className="w-8 h-8 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 6.253v13m0-13C6.5 6.253 2 10.998 2 17s4.5 10.747 10 10.747m0-13c5.5 0 10 4.745 10 10.747M12 6.253v13m0-13C6.5 6.253 2 10.998 2 17s4.5 10.747 10 10.747m0-13c5.5 0 10 4.745 10 10.747"
+                      />
                     </svg>
                   </div>
                   <h3 className="heading-3 mb-3">Professional Education</h3>
                   <p className="text-body mb-6 flex-grow">
-                    Specialised programmes for doctors, medical students, allied health professionals, and clinical leaders.
+                    Specialised programmes for doctors, medical students, allied
+                    health professionals, and clinical leaders.
                   </p>
                   <ul className="space-y-2 text-sm text-body">
                     <li className="flex items-start">
@@ -264,13 +299,24 @@ export default function Home() {
               <FadeIn delay={0.4}>
                 <Card hover className="p-8 h-full flex flex-col">
                   <div className="w-14 h-14 bg-gradient-to-br from-orange-400 to-orange-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                    <svg
+                      className="w-8 h-8 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"
+                      />
                     </svg>
                   </div>
                   <h3 className="heading-3 mb-3">Public Education</h3>
                   <p className="text-body mb-6 flex-grow">
-                    Free or low-cost programmes for everyone interested in learning about Lifestyle Medicine principles.
+                    Free or low-cost programmes for everyone interested in
+                    learning about Lifestyle Medicine principles.
                   </p>
                   <ul className="space-y-2 text-sm text-body">
                     <li className="flex items-start">
@@ -293,13 +339,24 @@ export default function Home() {
               <FadeIn delay={0.45}>
                 <Card hover className="p-8 h-full flex flex-col">
                   <div className="w-14 h-14 bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    <svg
+                      className="w-8 h-8 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M13 10V3L4 14h7v7l9-11h-7z"
+                      />
                     </svg>
                   </div>
                   <h3 className="heading-3 mb-3">Turnkey Services</h3>
                   <p className="text-body mb-6 flex-grow">
-                    End-to-end implementation support for clinics, hospitals, medical colleges, and organisations.
+                    End-to-end implementation support for clinics, hospitals,
+                    medical colleges, and organisations.
                   </p>
                   <ul className="space-y-2 text-sm text-body">
                     <li className="flex items-start">
@@ -322,13 +379,24 @@ export default function Home() {
               <FadeIn delay={0.5}>
                 <Card hover className="p-8 h-full flex flex-col">
                   <div className="w-14 h-14 bg-gradient-to-br from-red-400 to-red-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C6.5 6.253 2 10.998 2 17s4.5 10.747 10 10.747m0-13c5.5 0 10 4.745 10 10.747" />
+                    <svg
+                      className="w-8 h-8 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 6.253v13m0-13C6.5 6.253 2 10.998 2 17s4.5 10.747 10 10.747m0-13c5.5 0 10 4.745 10 10.747"
+                      />
                     </svg>
                   </div>
                   <h3 className="heading-3 mb-3">Faculty Development</h3>
                   <p className="text-body mb-6 flex-grow">
-                    Train-the-trainer and curriculum development support for educational institutions.
+                    Train-the-trainer and curriculum development support for
+                    educational institutions.
                   </p>
                   <ul className="space-y-2 text-sm text-body">
                     <li className="flex items-start">
@@ -351,13 +419,24 @@ export default function Home() {
               <FadeIn delay={0.55}>
                 <Card hover className="p-8 h-full flex flex-col">
                   <div className="w-14 h-14 bg-gradient-to-br from-indigo-400 to-indigo-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 12H9m6 0a6 6 0 11-12 0 6 6 0 0112 0z" />
+                    <svg
+                      className="w-8 h-8 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 4.354a4 4 0 110 5.292M15 12H9m6 0a6 6 0 11-12 0 6 6 0 0112 0z"
+                      />
                     </svg>
                   </div>
                   <h3 className="heading-3 mb-3">Institutional Partnerships</h3>
                   <p className="text-body mb-6 flex-grow">
-                    Collaborate with schools, colleges, medical institutions, hospitals, and organisations.
+                    Collaborate with schools, colleges, medical institutions,
+                    hospitals, and organisations.
                   </p>
                   <ul className="space-y-2 text-sm text-body">
                     <li className="flex items-start">
@@ -512,7 +591,9 @@ export default function Home() {
                   Ready to Transform Your Career?
                 </h2>
                 <p className="text-primary-100 max-w-2xl mx-auto mb-8 text-lg">
-                  Join Lifestyle Medicine Academy India and get internationally recognised IBLM certification. Learn from clinician leaders and advance your practice.
+                  Join Lifestyle Medicine Academy India and get internationally
+                  recognised IBLM certification. Learn from clinician leaders
+                  and advance your practice.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link href="/courses">
