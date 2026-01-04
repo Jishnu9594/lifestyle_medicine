@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic";
 import type { Metadata } from "next";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
@@ -98,10 +99,13 @@ export default function Home() {
     },
   ];
 
+  const EnquiryPopup = dynamic(() => import("@/components/EnquiryPopup"), { ssr: false });
   return (
     <>
       <Navigation />
-      <main className="min-h-screen overflow-hidden pt-14 sm:pt-16 md:pt-20">
+      {/* Enquiry Popup loads on website visit */}
+      <EnquiryPopup />
+      <main className="min-h-screen overflow-hidden pt-0 sm:pt-0 md:pt-0">
         {/* Hero Section */}
         <Section
           spacing="lg"
@@ -118,15 +122,17 @@ export default function Home() {
             <FadeIn delay={0.1}>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-12 sm:py-24 relative z-10">
                 {/* Left Content */}
-                <div>
+                <div className="relative z-20">
                   <div className="mb-6 inline-block">
                     <span className="badge-modern">Welcome to the Academy</span>
                   </div>
-                  <h1 className="heading-1 mb-6">
-                    <span className="gradient-text">
-                      Advancing Health Through
-                    </span>{" "}
-                    Lifestyle Medicine
+                  <h1 className="heading-1 mb-6 text-left w-full text-lg sm:text-xl md:text-2xl">
+                    <span className="gradient-text block whitespace-nowrap">
+                      Advancing Health Through Lifestyle
+                    </span>
+                    <span className="gradient-text block mt-2 animate-fadeInUp">
+                      Medicine
+                    </span>
                   </h1>
                   <p className="text-body mx-0 mb-8 text-lg">
                     For Professionals. For Institutions. For Communities.
