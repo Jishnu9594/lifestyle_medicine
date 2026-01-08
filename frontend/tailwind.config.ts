@@ -33,6 +33,9 @@ const config: Config = {
         slideInLeft: "slideInLeft 0.6s ease-out",
         slideInRight: "slideInRight 0.6s ease-out",
         scaleIn: "scaleIn 0.6s ease-out",
+        blob: "blob-animation 7s infinite",
+        imageFloat: "imageFloat 3s ease-in-out infinite",
+        imageZoom: "imageZoom 0.8s ease-out forwards",
       },
       keyframes: {
         slideDown: {
@@ -93,6 +96,38 @@ const config: Config = {
           to: {
             opacity: "1",
             transform: "scale(1)",
+          },
+        },
+        "blob-animation": {
+          "0%, 100%": {
+            transform: "translate(0, 0) scale(1)",
+          },
+          "25%": {
+            transform: "translate(20px, -30px) scale(1.05)",
+          },
+          "50%": {
+            transform: "translate(-30px, 20px) scale(0.95)",
+          },
+          "75%": {
+            transform: "translate(15px, 30px) scale(1.02)",
+          },
+        },
+        imageFloat: {
+          "0%, 100%": {
+            transform: "translateY(0px) rotateZ(0deg)",
+          },
+          "50%": {
+            transform: "translateY(-10px) rotateZ(1deg)",
+          },
+        },
+        imageZoom: {
+          from: {
+            transform: "scale(1)",
+            filter: "brightness(0.9)",
+          },
+          to: {
+            transform: "scale(1.1)",
+            filter: "brightness(1)",
           },
         },
       },

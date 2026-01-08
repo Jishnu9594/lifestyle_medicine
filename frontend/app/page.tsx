@@ -7,9 +7,8 @@ import { Container } from "@/components/Container";
 import { Section } from "@/components/Section";
 import { FadeIn } from "@/components/FadeIn";
 import { Card } from "@/components/Card";
-import { HeroImage } from "@/components/HeroImage";
-import { ModernStat } from "@/components/ModernStat";
 import { ModernFeatureCard } from "@/components/ModernFeatureCard";
+import { ModernHeroSection } from "@/components/ModernHeroSection";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -107,102 +106,9 @@ export default function Home() {
       <Navigation />
       {/* Enquiry Popup loads on website visit */}
       <EnquiryPopup />
-      <main className="min-h-screen overflow-hidden pt-0 sm:pt-0 md:pt-0">
-        {/* Hero Section */}
-        <Section
-          spacing="lg"
-          className="bg-gradient-to-br from-primary-50 via-white to-primary-100/50 relative overflow-hidden"
-        >
-          {/* Decorative Elements */}
-          <div className="absolute top-0 right-0 w-96 h-96 bg-primary-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"></div>
-          <div
-            className="absolute -bottom-8 left-0 w-72 h-72 bg-primary-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"
-            style={{ animationDelay: "2s" }}
-          ></div>
-
-          <Container>
-            <FadeIn delay={0.1}>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-12 sm:py-24 relative z-10">
-                {/* Left Content */}
-                <div className="relative z-20">
-                  <div className="mb-6 inline-block">
-                    <span className="badge-modern">Welcome to the Academy</span>
-                  </div>
-                  <h1 className="heading-1 mb-6 text-left w-full text-lg sm:text-xl md:text-2xl">
-                    <span className="gradient-text block whitespace-nowrap">
-                      Advancing Health Through Lifestyle
-                    </span>
-                    <span className="gradient-text block mt-2 animate-fadeInUp">
-                      Medicine
-                    </span>
-                  </h1>
-                  <p className="text-body mx-0 mb-8 text-lg">
-                    For Professionals. For Institutions. For Communities.
-                  </p>
-                  <p className="text-body mx-0 mb-8">
-                    Lifestyle Medicine Academy India is a clinician-led
-                    education and professional services organisation delivering
-                    internationally recognised Lifestyle Medicine education and
-                    certification, workforce training, and turnkey
-                    implementation support.
-                  </p>
-                  <p className="text-body mx-0 mb-8">
-                    We work with healthcare professionals, hospitals,
-                    educational institutions, organisations, and communities to
-                    embed evidence-based Lifestyle Medicine into real-world
-                    practice.
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <Button variant="primary" size="lg">
-                      <Link href="/courses">View Our Programs</Link>
-                    </Button>
-                    <Button variant="secondary" size="lg">
-                      <Link href="/contact">Get in Touch</Link>
-                    </Button>
-                  </div>
-
-                  {/* Stats */}
-                  <div className="grid grid-cols-3 gap-6 mt-12">
-                    <ModernStat
-                      number="9,720+"
-                      label="Active Students"
-                      iconType="students"
-                      delay={0}
-                    />
-                    <ModernStat
-                      number="6"
-                      label="Expert Courses"
-                      iconType="courses"
-                      delay={100}
-                    />
-                    <ModernStat
-                      number="4.92★"
-                      label="Average Rating"
-                      iconType="rating"
-                      delay={200}
-                    />
-                  </div>
-                </div>
-
-                {/* Right Hero Image */}
-                <div className="relative animate-scaleIn">
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary-500 to-primary-600 rounded-3xl blur-3xl opacity-40 animate-pulse-glow"></div>
-                  <div className="absolute -top-8 -right-8 w-72 h-72 bg-primary-400 rounded-full mix-blend-multiply filter blur-2xl opacity-20 animate-blob"></div>
-                  <div
-                    className="absolute -bottom-8 -left-8 w-72 h-72 bg-primary-300 rounded-full mix-blend-multiply filter blur-2xl opacity-20 animate-blob"
-                    style={{ animationDelay: "2s" }}
-                  ></div>
-
-                  <HeroImage
-                    src="https://images.unsplash.com/photo-1576091160550-112173f7f869?w=600&h=600&fit=crop&q=80"
-                    alt="Lifestyle Medicine Academy"
-                    fallbackSrc="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=600&h=600&fit=crop&q=80"
-                  />
-                </div>
-              </div>
-            </FadeIn>
-          </Container>
-        </Section>
+      <main className="overflow-hidden">
+        {/* Modern Hero Section */}
+        <ModernHeroSection />
 
         {/* What We Offer Section */}
         <Section spacing="lg">

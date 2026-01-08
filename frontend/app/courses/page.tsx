@@ -331,9 +331,7 @@ export default function CoursesPage() {
 
                       {/* CTA Button */}
                       <Link
-                        href={`/contact?course=${encodeURIComponent(
-                          `${course.title} - ${course.level}`
-                        )}`}
+                        href={`/courses/${course.id}?id=${course.id}`}
                         className="w-full mt-auto"
                       >
                         <Button
@@ -341,7 +339,7 @@ export default function CoursesPage() {
                           size="md"
                           className="w-full mt-auto"
                         >
-                          Enroll Now
+                          View Course
                         </Button>
                       </Link>
                     </div>

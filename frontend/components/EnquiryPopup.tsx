@@ -51,15 +51,16 @@ export default function EnquiryPopup() {
       <div className="relative w-[94vw] max-w-2xl rounded-3xl overflow-hidden bg-white/80 backdrop-blur-xl border border-white/30 shadow-[0_20px_60px_rgba(0,0,0,0.15)] animate-scaleIn">
         <div className="absolute inset-0 rounded-3xl pointer-events-none ring-1 ring-inset ring-white/30" />
 
-        {/* Close Button */}
+        {/* Close Button - Larger and more prominent on mobile */}
         <button
           onClick={() => {
             if (timerRef.current) clearTimeout(timerRef.current);
             setOpen(false);
           }}
-          className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-white/90 border border-gray-200 flex items-center justify-center text-gray-500 hover:text-gray-900 hover:scale-105 transition"
+          className="absolute top-3 right-3 md:top-4 md:right-4 z-20 w-12 h-12 md:w-10 md:h-10 rounded-full bg-white/95 border-2 border-gray-300 flex items-center justify-center text-gray-600 hover:text-gray-900 hover:bg-white hover:scale-110 transition-all shadow-md"
+          aria-label="Close popup"
         >
-          <X size={18} />
+          <X size={24} className="md:w-5 md:h-5" />
         </button>
 
         <div className="grid grid-cols-1 md:grid-cols-2">
