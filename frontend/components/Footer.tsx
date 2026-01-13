@@ -47,15 +47,12 @@ export function Footer() {
           <div className="animate-fadeInUp">
             <div className="flex items-center gap-3 mb-4">
               <Image
-                src="/lifestlelogo.png"
+                src="/lifestyle 4.png"
                 alt="LifeStyle Medicine Logo"
-                width={50}
-                height={50}
-                className="h-12 w-12 object-contain"
+                width={180}
+                height={70}
+                className="h-20 w-auto object-contain"
               />
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-primary-300 to-primary-200 bg-clip-text text-transparent">
-                LifeStyle Medicine
-              </h3>
             </div>
             <p className="text-gray-300 leading-relaxed">
               Lifestyle Medicine Academy India is a clinician-led education and

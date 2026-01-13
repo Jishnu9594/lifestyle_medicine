@@ -16,26 +16,48 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
-  const experts = [
+  const founders = [
     {
-      name: "Dr. Sunil Kumar",
-      role: "Founder & Director",
-      image:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop&q=80",
-      bio: "UK-based Lifestyle Medicine Physician, medical educator, and executive health coach with extensive international experience across the UK, Europe, the Middle East, and India.",
-      credentials: "MD, Lifestyle Medicine Physician",
-      details:
-        "Widely recognised for work in Lifestyle Medicine education and certification, burnout prevention, clinician wellbeing, and faculty development. His vision: move Lifestyle Medicine from evidence to education, education to systems, and prevention into practice.",
+      name: "Dr. Arundas H",
+      role: "Co-Founder & Managing Partner",
+      image: "/arun.jpeg",
+      specialty: "Family Physician & Preventive Medicine Specialist",
+      bio: "Family Physician, Preventive Medicine specialist, Diabetologist, and Research Consultant with strong focus on Lifestyle Medicine and NCD prevention.",
+      qualifications: [
+        "MBBS – Amrita Institute of Medical Sciences, Kochi",
+        "MD(Preventive & Social Medicine) – Kasturba Medical College, Manipal",
+        "Fellowship in Diabetology – Aster Health Academy",
+        "Certified Palliative Physician",
+      ],
+      expertise: [
+        "Lifestyle Medicine & Preventive Diabetology",
+        "Nutrition science & research",
+        "NCD prevention and reversal models",
+        "Healthcare entrepreneurship",
+      ],
+      roles:
+        "Research Consultant, Founder & Chief Physician (Mediwell Clinic), Faculty in Epidemiology at Pallium India (WHO Collaborating Centre)",
     },
     {
-      name: "Dr. Arun Das",
-      role: "Co-Founder",
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&q=80",
-      bio: "Clinician leader and Lifestyle Medicine advocate with deep engagement in education, community health, and professional outreach in India.",
-      credentials: "MD, Health Leader",
-      details:
-        "Contextualises Lifestyle Medicine for India, drives clinician engagement and capacity building, and develops partnerships. Brings global–local leadership model with Dr Sunil Kumar.",
+      name: "Dr. Sunil Kumar",
+      role: "Co-Founder & Academic Director",
+      image: "/sunil.jpeg",
+      specialty: "Anaesthesiologist & Lifestyle Medicine Physician",
+      bio: "Medical educator and healthcare leader with extensive experience in academic leadership, clinician training, and prevention-focused care. Based in UK.",
+      qualifications: [
+        "MBBS | MRCA | FCAI | FRSA | FBSLM | DipIBLM | MAcadMEd",
+        "Board-Certified in Lifestyle Medicine (US & UK)",
+        "Lifestyle Medicine Lead Tutor, WHO Collaborating Centre, Imperial College London",
+        "Honorary Senior Clinical Lecturer, Imperial College London",
+      ],
+      expertise: [
+        "Lifestyle Medicine integration in healthcare",
+        "Clinician training and education",
+        "Physician wellbeing programs",
+        "Surgical prehabilitation",
+      ],
+      roles:
+        "Foundation Year Doctors Programme Director at University Hospitals of Morecambe Bay NHS Trust, UK. Council Member Royal Society of Medicine, Faculty for NHS England",
     },
   ];
 
@@ -198,7 +220,7 @@ export default function AboutPage() {
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-primary-500 to-primary-600 rounded-3xl blur-3xl opacity-30"></div>
                   <AboutImage
-                    src="https://images.unsplash.com/photo-1576091160550-112173f7f869?w=500&h=500&fit=crop&q=80"
+                    src="/doctors-day-cute-young-handsome-man-lab-coat-glasses-smiling-holding-book-removebg-preview.png"
                     alt="Our Mission"
                     className="relative rounded-3xl shadow-2xl w-full object-cover border-2 border-primary-100 animate-imageFloat"
                   />
@@ -277,48 +299,180 @@ export default function AboutPage() {
           </Container>
         </Section>
 
-        {/* Meet Our Experts */}
+        {/* Meet Our Founders */}
         <Section spacing="lg">
           <Container>
             <FadeIn>
               <div className="text-center mb-16">
-                <h2 className="heading-2 mb-4">Meet Our Expert Instructors</h2>
+                <h2 className="heading-2 mb-4">Meet Our Founders</h2>
                 <p className="text-body mx-auto max-w-2xl">
-                  Learn from certified healthcare professionals with decades of
-                  combined clinical and teaching experience.
+                  Learn from visionary healthcare leaders with decades of
+                  combined clinical, research, and educational expertise.
                 </p>
               </div>
             </FadeIn>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-              {experts.map((expert, index) => (
-                <FadeIn key={expert.name} delay={0.4 + index * 0.1}>
-                  <div className="text-center group">
-                    <div className="relative mb-6 overflow-hidden rounded-2xl">
-                      <div className="absolute inset-0 bg-gradient-to-r from-primary-500 to-primary-600 rounded-2xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
-                      <AboutImage
-                        src={expert.image}
-                        alt={expert.name}
-                        className="relative w-48 h-48 mx-auto rounded-2xl object-cover border-2 border-primary-100 group-hover:scale-105 transition-transform duration-300 shadow-lg"
-                      />
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              {founders.map((founder, index) => (
+                <FadeIn key={founder.name} delay={0.4 + index * 0.1}>
+                  <Card hover className="overflow-hidden">
+                    <div className="p-8">
+                      <div className="flex items-start gap-6 mb-6">
+                        <AboutImage
+                          src={founder.image}
+                          alt={founder.name}
+                          className="w-24 h-24 rounded-xl object-cover border-2 border-primary-100 flex-shrink-0"
+                        />
+                        <div className="flex-1">
+                          <h3 className="heading-3 mb-1">{founder.name}</h3>
+                          <p className="text-primary-600 font-semibold mb-1">
+                            {founder.role}
+                          </p>
+                          <p className="text-sm text-muted">
+                            {founder.specialty}
+                          </p>
+                        </div>
+                      </div>
+
+                      <p className="text-body text-sm mb-4">{founder.bio}</p>
+
+                      <div className="mb-4">
+                        <p className="text-xs font-semibold text-primary-600 uppercase tracking-wide mb-2">
+                          Key Qualifications
+                        </p>
+                        <ul className="space-y-1">
+                          {founder.qualifications.map((qual, i) => (
+                            <li
+                              key={i}
+                              className="text-xs text-muted flex items-start gap-2"
+                            >
+                              <span className="text-primary-500 mt-0.5">•</span>
+                              <span>{qual}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div className="mb-4">
+                        <p className="text-xs font-semibold text-primary-600 uppercase tracking-wide mb-2">
+                          Core Expertise
+                        </p>
+                        <ul className="space-y-1">
+                          {founder.expertise.map((exp, i) => (
+                            <li
+                              key={i}
+                              className="text-xs text-muted flex items-start gap-2"
+                            >
+                              <span className="text-primary-500 mt-0.5">•</span>
+                              <span>{exp}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div className="pt-4 border-t border-gray-200">
+                        <p className="text-xs text-muted">
+                          <span className="font-semibold text-gray-700">
+                            Current Roles:{" "}
+                          </span>
+                          {founder.roles}
+                        </p>
+                      </div>
                     </div>
-                    <h3 className="heading-3 mb-2">{expert.name}</h3>
-                    <p className="text-primary-600 font-semibold mb-3">
-                      {expert.role}
-                    </p>
-                    <p className="text-muted text-sm mb-3">{expert.bio}</p>
-                    <p className="text-xs font-semibold text-primary-500 bg-primary-50 inline-block px-3 py-1 rounded-full">
-                      {expert.credentials}
-                    </p>
-                  </div>
+                  </Card>
                 </FadeIn>
               ))}
             </div>
           </Container>
         </Section>
 
-        {/* Video Section */}
+        {/* See What You'll Learn Section */}
+        {/* <Section spacing="lg" className="bg-orange-50/30">
+          <Container>
+            <FadeIn>
+              <div className="text-center mb-16">
+                <h2 className="heading-2 mb-4">See What You'll Learn</h2>
+                <p className="text-body mx-auto max-w-2xl text-lg">
+                  Watch this introduction to our lifestyle medicine curriculum.
+                </p>
+              </div>
+
+              <div className="flex justify-center">
+                <div className="w-full max-w-4xl">
+                  <div
+                    className="relative w-full bg-black rounded-2xl overflow-hidden shadow-2xl"
+                    style={{ paddingBottom: "56.25%" }}
+                  >
+                    <iframe
+                      src="https://www.youtube.com/embed/QGGarhgofR8?si=W19Zd8TGxbpke-eJ"
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                      style={{
+                        position: "absolute",
+                        top: 0,
+                        left: 0,
+                        width: "100%",
+                        height: "100%",
+                        border: "none",
+                      }}
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+            </FadeIn>
+          </Container>
+        </Section> */}
+
+        {/* LMAI Services Section */}
         <Section
+          spacing="lg"
+          className="bg-gradient-to-br from-primary-50 to-primary-100/50"
+        >
+          <Container>
+            <FadeIn>
+              <div className="text-center mb-12">
+                <h2 className="heading-2 mb-4">LMAI Services</h2>
+                <p className="text-body mx-auto max-w-2xl text-lg">
+                  Explore the comprehensive services we offer to healthcare
+                  professionals and individuals.
+                </p>
+              </div>
+
+              <div className="mx-auto max-w-4xl">
+                <div
+                  className="rounded-2xl overflow-hidden shadow-2xl bg-black"
+                  style={{
+                    paddingBottom: "56.25%",
+                    position: "relative",
+                    height: 0,
+                  }}
+                >
+                  <iframe
+                    src="https://www.youtube.com/embed/PUZBFwoRBuE"
+                    title="LMAI Services"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                    }}
+                  ></iframe>
+                </div>
+              </div>
+            </FadeIn>
+          </Container>
+        </Section>
+
+        {/* Watch Our Story Section */}
+        {/* <Section
           spacing="lg"
           className="bg-gradient-to-br from-gray-900 to-primary-900 relative overflow-hidden"
         >
@@ -338,21 +492,35 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              <div className="relative z-10 aspect-video rounded-2xl overflow-hidden shadow-2xl">
-                <iframe
-                  width="100%"
-                  height="600"
-                  src="https://www.youtube.com/embed/7lDEcMF0Nhk"
-                  title="Lifestyle Medicine Academy Story"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full"
-                ></iframe>
+              <div className="relative z-10 mx-auto max-w-4xl">
+                <div
+                  className="rounded-2xl overflow-hidden shadow-2xl bg-black"
+                  style={{
+                    paddingBottom: "56.25%",
+                    position: "relative",
+                    height: 0,
+                  }}
+                >
+                  <iframe
+                    src="https://www.youtube.com/embed/QGGarhgofR8"
+                    title="Lifestyle Medicine Academy Story"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                    }}
+                  ></iframe>
+                </div>
               </div>
             </FadeIn>
           </Container>
-        </Section>
+        </Section> */}
 
         {/* Stats Section */}
         <Section spacing="lg">

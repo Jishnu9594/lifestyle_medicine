@@ -19,18 +19,18 @@ export function Navigation() {
   return (
     <nav className="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-2xl border-b border-gray-100/50 shadow-lg">
       <div className="w-full px-3 sm:px-4 md:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-14 sm:h-16 md:h-20 py-2">
+        <div className="flex items-center justify-between h-16 sm:h-18 md:h-24 py-3 sm:py-4">
           {/* Logo - Left Corner */}
           <Link
             href="/"
             className="flex items-center hover:opacity-80 transition-opacity duration-300 flex-shrink-0"
           >
             <Image
-              src="/Screenshot_from_2026-01-04_17-24-56-removebg-preview.png"
+              src="/lifestyle 4.png"
               alt="LifeStyle Medicine Academy India"
-              width={1000}
-              height={100}
-              className="h-12 w-12 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 object-contain"
+              width={200}
+              height={80}
+              className="h-14 w-auto sm:h-16 md:h-20 lg:h-24 object-contain"
               priority
             />
           </Link>

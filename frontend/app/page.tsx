@@ -110,6 +110,410 @@ export default function Home() {
         {/* Modern Hero Section */}
         <ModernHeroSection />
 
+        {/* Introduction to Lifestyle Medicine - 6 Pillars Section (Modern Design) */}
+        <Section spacing="lg" className="relative bg-white overflow-hidden">
+          {/* Animated Background Elements */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-orange-200 to-orange-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+            <div
+              className="absolute top-1/3 left-0 w-80 h-80 bg-gradient-to-br from-orange-100 to-orange-50 rounded-full mix-blend-multiply filter blur-3xl opacity-25 animate-blob"
+              style={{ animationDelay: "2s" }}
+            ></div>
+            <div
+              className="absolute bottom-0 right-1/3 w-96 h-96 bg-gradient-to-tl from-primary-100 to-primary-50 rounded-full mix-blend-multiply filter blur-3xl opacity-25 animate-blob"
+              style={{ animationDelay: "4s" }}
+            ></div>
+          </div>
+
+          <Container className="relative z-10">
+            <FadeIn delay={0.2}>
+              <div className="text-center mb-20">
+                <div className="inline-block bg-gradient-to-r from-primary-600 to-orange-500 px-6 py-2 rounded-full text-white text-sm font-semibold mb-6">
+                  UNDERSTANDING
+                </div>
+                <h2 className="heading-1 text-text mb-6">
+                  What is{" "}
+                  <span className="bg-gradient-to-r from-primary-600 to-orange-500 bg-clip-text text-transparent">
+                    Lifestyle Medicine?
+                  </span>
+                </h2>
+                <p className="text-muted mx-auto max-w-3xl text-lg mb-6 leading-relaxed">
+                  Lifestyle medicine is the{" "}
+                  <span className="font-semibold text-text">
+                    evidence-based medical specialty
+                  </span>{" "}
+                  that treats root causes with therapeutic lifestyle
+                  interventions. It is how clinicians restore patient health and
+                  reignite their joy of practice.
+                </p>
+                <p className="text-muted mx-auto max-w-3xl text-lg leading-relaxed">
+                  Grounded in six interconnected pillars, lifestyle medicine
+                  treats, reverses, and prevents chronic conditions like{" "}
+                  <span className="font-semibold">
+                    type 2 diabetes, obesity, cardiovascular disease
+                  </span>{" "}
+                  and more.
+                </p>
+              </div>
+            </FadeIn>
+
+            {/* 6 Pillars Grid - Modern Glassmorphism Design */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* Pillar 1: Nutrition */}
+              <FadeIn delay={0.3}>
+                <div className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 p-8 h-full border border-primary-100 hover:border-primary-300 hover:bg-gradient-to-br hover:from-white hover:to-primary-50">
+                  {/* Gradient Background on Hover */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                  <div className="relative z-10">
+                    {/* Icon */}
+                    <div className="w-16 h-16 bg-gradient-to-br from-primary-400 to-primary-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                      <svg
+                        className="w-8 h-8 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z" />
+                      </svg>
+                    </div>
+
+                    {/* Number Badge */}
+                    <div className="absolute top-6 right-6 text-4xl font-bold bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent opacity-15 group-hover:opacity-30 transition-opacity">
+                      01
+                    </div>
+
+                    <h3 className="heading-3 mb-3 text-text relative">
+                      Optimal Nutrition
+                    </h3>
+                    <p className="text-muted text-sm leading-relaxed mb-6">
+                      Eat more whole foods and focus on minimally processed,
+                      plant-predominant, nutrient-dense meals and snacks.
+                    </p>
+
+                    {/* Features List */}
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3">
+                        <span className="text-primary-600 font-bold flex-shrink-0">
+                          ▸
+                        </span>
+                        <span className="text-muted text-sm">
+                          Plant-based eating
+                        </span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <span className="text-primary-600 font-bold flex-shrink-0">
+                          ▸
+                        </span>
+                        <span className="text-muted text-sm">
+                          Whole foods focus
+                        </span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <span className="text-primary-600 font-bold flex-shrink-0">
+                          ▸
+                        </span>
+                        <span className="text-muted text-sm">
+                          Metabolic health
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </FadeIn>
+
+              {/* Pillar 2: Physical Activity */}
+              <FadeIn delay={0.35}>
+                <div className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 p-8 h-full border border-orange-100 hover:border-orange-300 hover:bg-gradient-to-br hover:from-white hover:to-orange-50">
+                  <div className="absolute inset-0 bg-gradient-to-br from-orange-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                  <div className="relative z-10">
+                    <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                      <svg
+                        className="w-8 h-8 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M13.49 5.48c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm-3.6 13.9l1-4.4 2.1 2v6h2v-7.5l-2.1-2 .6-3c1.3 1.5 3.3 2.5 5.5 2.5v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1l-5.2 2.2v4.7h2v-3.4l3.9-1.6c-.1.4-.2.8-.2 1.3 0 2.1 1.7 3.9 3.8 3.9z" />
+                      </svg>
+                    </div>
+
+                    <div className="absolute top-6 right-6 text-4xl font-bold bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent opacity-15 group-hover:opacity-30 transition-opacity">
+                      02
+                    </div>
+
+                    <h3 className="heading-3 mb-3 text-text relative">
+                      Physical Activity
+                    </h3>
+                    <p className="text-muted text-sm leading-relaxed mb-6">
+                      Move every day and incorporate strength, flexibility, and
+                      aerobic activities into your routine.
+                    </p>
+
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3">
+                        <span className="text-orange-600 font-bold flex-shrink-0">
+                          ▸
+                        </span>
+                        <span className="text-muted text-sm">
+                          Regular exercise
+                        </span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <span className="text-orange-600 font-bold flex-shrink-0">
+                          ▸
+                        </span>
+                        <span className="text-muted text-sm">
+                          Strength training
+                        </span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <span className="text-orange-600 font-bold flex-shrink-0">
+                          ▸
+                        </span>
+                        <span className="text-muted text-sm">
+                          Daily movement
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </FadeIn>
+
+              {/* Pillar 3: Sleep */}
+              <FadeIn delay={0.4}>
+                <div className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 p-8 h-full border border-blue-100 hover:border-blue-300 hover:bg-gradient-to-br hover:from-white hover:to-blue-50">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                  <div className="relative z-10">
+                    <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                      <svg
+                        className="w-8 h-8 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M20 2H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14l4 4V4c0-1.1-.9-2-2-2zm-2 12h-4v4h-4v-4H6v-2h4V8h4v4h4v2z" />
+                      </svg>
+                    </div>
+
+                    <div className="absolute top-6 right-6 text-4xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent opacity-15 group-hover:opacity-30 transition-opacity">
+                      03
+                    </div>
+
+                    <h3 className="heading-3 mb-3 text-text relative">
+                      Restorative Sleep
+                    </h3>
+                    <p className="text-muted text-sm leading-relaxed mb-6">
+                      Create the right conditions to get 7-9 hours of quality
+                      sleep every night to allow the body to reset and recover.
+                    </p>
+
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3">
+                        <span className="text-blue-600 font-bold flex-shrink-0">
+                          ▸
+                        </span>
+                        <span className="text-muted text-sm">
+                          7-9 hours sleep
+                        </span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <span className="text-blue-600 font-bold flex-shrink-0">
+                          ▸
+                        </span>
+                        <span className="text-muted text-sm">
+                          Sleep hygiene
+                        </span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <span className="text-blue-600 font-bold flex-shrink-0">
+                          ▸
+                        </span>
+                        <span className="text-muted text-sm">
+                          Circadian alignment
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </FadeIn>
+
+              {/* Pillar 4: Stress Management */}
+              <FadeIn delay={0.45}>
+                <div className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 p-8 h-full border border-green-100 hover:border-green-300 hover:bg-gradient-to-br hover:from-white hover:to-green-50">
+                  <div className="absolute inset-0 bg-gradient-to-br from-green-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                  <div className="relative z-10">
+                    <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                      <svg
+                        className="w-8 h-8 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
+                      </svg>
+                    </div>
+
+                    <div className="absolute top-6 right-6 text-4xl font-bold bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent opacity-15 group-hover:opacity-30 transition-opacity">
+                      04
+                    </div>
+
+                    <h3 className="heading-3 mb-3 text-text relative">
+                      Stress Management
+                    </h3>
+                    <p className="text-muted text-sm leading-relaxed mb-6">
+                      Develop healthy coping skills to meet the ever-changing
+                      demands of life and bolster resilience.
+                    </p>
+
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3">
+                        <span className="text-green-600 font-bold flex-shrink-0">
+                          ▸
+                        </span>
+                        <span className="text-muted text-sm">
+                          Mindfulness & meditation
+                        </span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <span className="text-green-600 font-bold flex-shrink-0">
+                          ▸
+                        </span>
+                        <span className="text-muted text-sm">
+                          Relaxation techniques
+                        </span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <span className="text-green-600 font-bold flex-shrink-0">
+                          ▸
+                        </span>
+                        <span className="text-muted text-sm">
+                          Mental health support
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </FadeIn>
+
+              {/* Pillar 5: Social Connection */}
+              <FadeIn delay={0.5}>
+                <div className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 p-8 h-full border border-pink-100 hover:border-pink-300 hover:bg-gradient-to-br hover:from-white hover:to-pink-50">
+                  <div className="absolute inset-0 bg-gradient-to-br from-pink-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                  <div className="relative z-10">
+                    <div className="w-16 h-16 bg-gradient-to-br from-pink-400 to-pink-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                      <svg
+                        className="w-8 h-8 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
+                      </svg>
+                    </div>
+
+                    <div className="absolute top-6 right-6 text-4xl font-bold bg-gradient-to-r from-pink-400 to-pink-600 bg-clip-text text-transparent opacity-15 group-hover:opacity-30 transition-opacity">
+                      05
+                    </div>
+
+                    <h3 className="heading-3 mb-3 text-text relative">
+                      Connectedness
+                    </h3>
+                    <p className="text-muted text-sm leading-relaxed mb-6">
+                      Foster supportive relationships and build connections that
+                      bring meaning and purpose to life.
+                    </p>
+
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3">
+                        <span className="text-pink-600 font-bold flex-shrink-0">
+                          ▸
+                        </span>
+                        <span className="text-muted text-sm">
+                          Community engagement
+                        </span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <span className="text-pink-600 font-bold flex-shrink-0">
+                          ▸
+                        </span>
+                        <span className="text-muted text-sm">
+                          Family relationships
+                        </span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <span className="text-pink-600 font-bold flex-shrink-0">
+                          ▸
+                        </span>
+                        <span className="text-muted text-sm">
+                          Social wellbeing
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </FadeIn>
+
+              {/* Pillar 6: Substance Use Avoidance */}
+              <FadeIn delay={0.55}>
+                <div className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 p-8 h-full border border-purple-100 hover:border-purple-300 hover:bg-gradient-to-br hover:from-white hover:to-purple-50">
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                  <div className="relative z-10">
+                    <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                      <svg
+                        className="w-8 h-8 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                      </svg>
+                    </div>
+
+                    <div className="absolute top-6 right-6 text-4xl font-bold bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent opacity-15 group-hover:opacity-30 transition-opacity">
+                      06
+                    </div>
+
+                    <h3 className="heading-3 mb-3 text-text relative">
+                      Risky Substance Avoidance
+                    </h3>
+                    <p className="text-muted text-sm leading-relaxed mb-6">
+                      Avoid behaviors that include the consumption of or
+                      exposure to harmful substances.
+                    </p>
+
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3">
+                        <span className="text-purple-600 font-bold flex-shrink-0">
+                          ▸
+                        </span>
+                        <span className="text-muted text-sm">
+                          Tobacco cessation
+                        </span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <span className="text-purple-600 font-bold flex-shrink-0">
+                          ▸
+                        </span>
+                        <span className="text-muted text-sm">
+                          Alcohol moderation
+                        </span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <span className="text-purple-600 font-bold flex-shrink-0">
+                          ▸
+                        </span>
+                        <span className="text-muted text-sm">
+                          Substance prevention
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </FadeIn>
+            </div>
+          </Container>
+        </Section>
+
         {/* What We Offer Section */}
         <Section spacing="lg">
           <Container>
@@ -410,41 +814,46 @@ export default function Home() {
         </Section>
 
         {/* Video Section */}
-        <Section spacing="lg">
+
+        {/* See What You'll Learn Section */}
+        <Section spacing="lg" className="bg-orange-50/30">
           <Container>
-            <FadeIn delay={0.6}>
-              <div className="text-center mb-12">
+            <FadeIn>
+              <div className="text-center mb-16">
                 <h2 className="heading-2 mb-4">See What You'll Learn</h2>
-                <p className="text-body mx-auto max-w-2xl mb-12">
+                <p className="text-body mx-auto max-w-2xl text-lg">
                   Watch this introduction to our lifestyle medicine curriculum.
                 </p>
               </div>
 
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-gray-900">
-                <div className="aspect-video flex items-center justify-center bg-gradient-to-br from-primary-600 to-primary-800">
-                  <div className="text-center">
-                    <div className="mb-4">
-                      <svg
-                        className="w-24 h-24 mx-auto text-white"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"></path>
-                      </svg>
-                    </div>
-                    <p className="text-white text-lg font-semibold">
-                      Intro to Lifestyle Medicine
-                    </p>
-                    <p className="text-primary-200 text-sm mt-2">
-                      Click to watch (Embedded from YouTube)
-                    </p>
+              <div className="flex justify-center">
+                <div className="w-full max-w-4xl">
+                  <div
+                    className="relative w-full bg-black rounded-2xl overflow-hidden shadow-2xl"
+                    style={{ paddingBottom: "56.25%" }}
+                  >
+                    <iframe
+                      src="https://www.youtube.com/embed/QGGarhgofR8?si=W19Zd8TGxbpke-eJ"
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                      style={{
+                        position: "absolute",
+                        top: 0,
+                        left: 0,
+                        width: "100%",
+                        height: "100%",
+                        border: "none",
+                      }}
+                    ></iframe>
                   </div>
                 </div>
               </div>
             </FadeIn>
           </Container>
         </Section>
-
         {/* Testimonials Section */}
         <Section spacing="lg" className="bg-white">
           <Container>
